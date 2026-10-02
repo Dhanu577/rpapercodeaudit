@@ -2,23 +2,30 @@
 
 Verified source commit: `76c5f8523716804dbe0a9500b4b7e216c6af225c`. Package code was not executed.
 
-The cleaned table retains **24 rows** from the 107-row draft and drops **83 rows**. Every retained paper sentence is an exact substring of the supplied `DESeq.txt` after whitespace normalization only.
+The cleaned table retains **24 rows** from the 107-row draft and drops **83 rows**. Every retained exact paper sentence is an exact substring of the supplied `DESeq.txt` after whitespace normalization only.
 
 ## Verdict counts
 
 | Verdict | Count |
 |---|---:|
-| consistent | 19 |
+| consistent | 18 |
 | partial | 4 |
 | inconsistent | 0 |
 | not found | 0 |
-| not verified | 1 |
+| not verified | 2 |
 
-**Rows fully verified with a validated on-disk excerpt:** 24 of 24.
-**Rows not verified:** 1.
-**Human verification:** 0 rows; the `Checked by me?` field is `N` for every row.
+**Rows with validated on-disk excerpts:** 24 of 24.
+**Rows not verified:** 2.
+There are **six rows human-checked** and **eighteen AI-assisted only**.
 
 ## Most interesting inconsistencies and qualifications
+
+### Row 2: Initial estimation — **not verified**
+Paper: To get a gene-wise dis persion estimate for a gene i, we start by fitting a nega tive binomial GLM without an LFC prior for the design matrix X to the gene’s count data.
+Why: Validated code quote: “# fit the negative binomial GLM without a prior, # used to construct the prior variances # and for the hat matrix diagonals for calculating Cook's distance”.
+Code quote: Validated code quote: “# fit the negative binomial GLM without a prior, # used to construct the prior variances # and for the hat matrix diagonals for calculating Cook's distance”.
+Issue category: cited excerpt consists only of comments and describes a different step
+Source: [R/fitNbinomGLMs.R:253-255](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/R/fitNbinomGLMs.R#L253-L255)
 
 ### Row 12: Uncertainty — **partial**
 Paper: DESeq2 reports the standard error for each shrunken LFC estimate, obtained from the curvature of the coefficient’s posterior (dashed lines in Figure 2D) at its maximum.
@@ -48,13 +55,6 @@ Code quote: Validated code quote: “w_vec = weights.row(i).t() % mu_hat/(1.0 + 
 Issue category: not supported by cited lines
 Source: [src/DESeq2.cpp:337-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L337-L339)
 
-### Row 51: Relationship between sample size and shrinkage strength — **partial**
-Paper: Furthermore, as the degrees of freedom increase, and the experiment pro vides more information for LFC estimation, the shrunken estimates will converge to the unshrunken estimates.
-Why: The code uses residual degrees of freedom when estimating dispersion-prior variance, but it does not expose a direct function mapping sample size to LFC shrinkage. The paper’s convergence statement is therefore only indirectly supported.
-Code quote: Validated code quote: “m <- nrow(modelMatrix) p <- ncol(modelMatrix)”.
-Issue category: other
-Source: [R/core.R:1151-1153](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/R/core.R#L1151-L1153)
-
 ## Limitations
 
-The cleaned set is a deliberately narrow core-method review, not a claim-coverage benchmark. Rows about rlog/VST, plotting, generic testing APIs, and downstream/benchmark analyses were dropped. The keyword locator returns candidates and can overproduce locations; a non-overlap with the pilot table is not proof of falsity. The pilot table has 107 rows but only 85 explicit file/range references, and its paper-sentence column was blank, so row-level semantic matching is necessarily conservative. The vignette change notes identify post-2014 behavior where the checked-in documentation says the implementation evolved.
+The cleaned set is a deliberately narrow core-method review, not a claim-coverage benchmark. Rows about rlog/VST, plotting, generic testing APIs, and downstream/benchmark analyses were dropped. The keyword locator returns candidates and can overproduce locations; a non-overlap with the pilot table is not proof of falsity. The pilot table has 107 rows but only 85 explicit file/range references, and its paper-sentence column was blank, so row-level semantic matching is necessarily conservative. The same excerpt supported two different paper sentences in rows 16 and 18, so those citations should not be treated as independent proof. Row 2’s cited excerpt consists only of comments and describes a different step from the paper sentence. Suggested stronger evidence is explicitly unverified by the author. The vignette change notes identify post-2014 behavior where the checked-in documentation says the implementation evolved.
