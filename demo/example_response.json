@@ -1,0 +1,25 @@
+{
+  "claims": [
+    {
+      "id": "C0001",
+      "verbatim_sentence": "The method filters genes below 10 counts.",
+      "section_or_figure": "Methods",
+      "claim_type": "filtering",
+      "what_to_look_for": "A filtering threshold of 10 counts."
+    },
+    {
+      "id": "C0002",
+      "verbatim_sentence": "The method filters genes below ten counts.",
+      "section_or_figure": "Methods",
+      "claim_type": "filtering",
+      "what_to_look_for": "Whether the threshold is written as ten counts."
+    },
+    {
+      "id": "C0003",
+      "verbatim_sentence": "The method uses a Bayesian prior.",
+      "section_or_figure": "Methods",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "A Bayesian prior in the implementation."
+    }
+  ]
+}
