@@ -1,0 +1,10 @@
+{
+  "issue_categories": [
+    "implementation differs from described formula",
+    "behaviour changed across versions",
+    "paper analysis missing from repo",
+    "benchmark differs from paper",
+    "undocumented default",
+    "other"
+  ]
+}
