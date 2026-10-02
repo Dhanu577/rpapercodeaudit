@@ -1,0 +1,11 @@
+{
+  "accepted": [
+    {
+      "id": "C0001",
+      "verbatim_sentence": "The method filters genes below 10 counts.",
+      "section_or_figure": "Methods",
+      "claim_type": "filtering",
+      "what_to_look_for": "A filtering threshold of 10 counts."
+    }
+  ]
+}
