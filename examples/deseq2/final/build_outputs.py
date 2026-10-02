@@ -168,7 +168,8 @@ findings.write_text('\n'.join(lines)+'\n',encoding='utf-8')
 # Include every retained row, grouped by the author-review status.
 sp=['# DESeq2 spot checks','', 'All 24 retained rows are listed below. Human-checked rows reflect the author’s supplied review; all other rows are AI-assisted only, not yet human-verified.','', '## Human-checked rows','']
 for i,r in enumerate([x for x in kept if x['Checked by me?']=='Y'],1):
- sp += [f"### Row {r['Original row']}: {r['Technical component / claim']}",f"Verdict: **{r['Verdict']}**",'Checked by me?: **Y**',f"Paper sentence (readable): {r['Paper sentence (readable)']}",f"Code: [{r['Code file']}:{r['Code lines']}]({r['GitHub permalink']})",'']
+ display_verdict='not supported by cited excerpt' if r['Verdict']=='not verified' else r['Verdict']
+ sp += [f"### Row {r['Original row']}: {r['Technical component / claim']}",f"Verdict: **{display_verdict}**",'Checked by me?: **Y**',f"Paper sentence (readable): {r['Paper sentence (readable)']}",f"Code: [{r['Code file']}:{r['Code lines']}]({r['GitHub permalink']})",'']
 sp += ['## AI-assisted only rows','']
 for r in [x for x in kept if x['Checked by me?']=='N']:
  sp += [f"### Row {r['Original row']}: {r['Technical component / claim']}",f"Verdict: **{r['Verdict']}**",'AI-assisted only, not yet human-verified.',f"Paper sentence (readable): {r['Paper sentence (readable)']}",f"Code: [{r['Code file']}:{r['Code lines']}]({r['GitHub permalink']})",'']

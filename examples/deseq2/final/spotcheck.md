@@ -5,7 +5,7 @@ All 24 retained rows are listed below. Human-checked rows reflect the author’s
 ## Human-checked rows
 
 ### Row 2: Initial estimation
-Verdict: **not verified**
+Verdict: **not supported by cited excerpt**
 Checked by me?: **Y**
 Paper sentence (readable): To get a gene-wise dis persion estimate for a gene i, we start by fitting a nega tive binomial GLM without an LFC prior for the design matrix X to the gene’s count data.
 Code: [R/fitNbinomGLMs.R:253-255](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/R/fitNbinomGLMs.R#L253-L255)
@@ -35,7 +35,7 @@ Paper sentence (readable): The strength of shrinkage does not depend simply on t
 Code: [src/DESeq2.cpp:336-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L336-L339)
 
 ### Row 30: Behaviour for very low-count genes
-Verdict: **not verified**
+Verdict: **not supported by cited excerpt**
 Checked by me?: **Y**
 Paper sentence (readable): For genes with very low read count, even an estimate of zero LFC is not significant, as the large uncertainty of the estimate does not allow us to exclude that the gene may in truth be more than weakly affected by the experimental condition.
 Code: [src/DESeq2.cpp:337-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L337-L339)
