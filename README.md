@@ -4,7 +4,7 @@ RPaperCodeAudit is a human-in-the-loop annotation helper for auditing paper/code
 
 ## Current status
 
-Milestones 1–6 are implemented locally: schema/export, exact claim validation, no-API heuristic extraction, commit-pinned code location, optional provider-neutral LLM mode, draft verdicts, review UI, and one-command pipeline. The DESeq2 case study has now been run; the external-table comparison remains unavailable because its workbook is not present. The supplied GitHub URL can be used for publication once authentication is available.
+Milestones 1–6 are implemented locally: schema/export, exact claim validation, no-API heuristic extraction, commit-pinned code location, optional provider-neutral LLM mode, draft verdicts, review UI, and one-command pipeline. The DESeq2 case study and comparison against the supplied pilot table have now been run. The supplied GitHub URL can be used for publication once authentication is available.
 
 ## Setup
 
@@ -96,7 +96,7 @@ Load `outputs/results.json`. The paper sentence appears beside the validated cod
 
 ## DESeq2 case study
 
-The requested case-study commit is `76c5f8523716804dbe0a9500b4b7e216c6af225c` from `https://github.com/thelovelab/DESeq2`. The supplied Methods text was run in no-API mode against that exact commit, producing 319 accepted claims, 1,595 validated keyword locations, 0 not-found claims, and 0 invalid excerpts. The comparison workbook `deseq2_pilot_combined_table.xlsx` is still unavailable, so table-match metrics remain `N/A`. See `examples/deseq2/evaluation.md`. No package code was executed.
+The requested case-study commit is `76c5f8523716804dbe0a9500b4b7e216c6af225c` from `https://github.com/thelovelab/DESeq2`. The supplied Methods text was run in no-API mode against that exact commit, producing 319 accepted claims, 1,595 validated keyword locations, 0 not-found claims, and 0 invalid excerpts. Comparison against the supplied pilot table found 16 of 107 table rows with overlapping locations and 11 of 1,595 tool locations overlapping a table reference; exact range matches were zero. See `examples/deseq2/evaluation.md`. No package code was executed.
 
 ## Tests
 
