@@ -1,0 +1,3 @@
+Methods
+The method filters genes below 10 counts.
+The method uses a fixed size factor.
