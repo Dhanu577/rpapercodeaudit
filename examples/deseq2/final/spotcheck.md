@@ -16,14 +16,14 @@ Instruction: Open the permalink, read the cited lines, and decide whether the qu
 
 ## Spot check 3: row 18 — Relationship between Fisher information and shrinkage
 Verdict label: **partial** (draft; human review pending)
-Paper sentence: ThepriorinfluencestheMAPesti matewhenthedensityofthelikelihoodandthepriorare multipliedtocalculatetheposterior.
+Paper sentence: The strength of shrinkage does not depend simply on the mean count, but rather on the amount of informa tion available for the fold change estimation (as indicated by the observed Fisher information; see Methods).
 Code: [src/DESeq2.cpp:336-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L336-L339)
 Instruction: Open the permalink, read the cited lines, and decide whether the quoted code supports the paper sentence; record your decision and notes in the Final Table.
 
-## Spot check 4: row 24 — Gene-specific shrinkage strength
+## Spot check 4: row 30 — Behaviour for very low-count genes
 Verdict label: **partial** (draft; human review pending)
-Paper sentence: The strength of shrinkage does not depend simply on the mean count, but rather on the amount of informa tion available for the fold change estimation (as indicated by the observed Fisher information; see Methods).
-Code: [R/core.R:1611-1613](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/R/core.R#L1611-L1613)
+Paper sentence: For genes with very low read count, even an estimate of zero LFC is not significant, as the large uncertainty of the estimate does not allow us to exclude that the gene may in truth be more than weakly affected by the experimental condition.
+Code: [src/DESeq2.cpp:337-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L337-L339)
 Instruction: Open the permalink, read the cited lines, and decide whether the quoted code supports the paper sentence; record your decision and notes in the Final Table.
 
 ## Spot check 5: row 2 — Initial estimation

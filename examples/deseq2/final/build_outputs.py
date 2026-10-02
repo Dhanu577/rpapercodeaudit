@@ -13,7 +13,7 @@ PAPER=ROOT/'examples/deseq2/DESeq.txt'
 TABLE=Path('/home/ubuntu/upload/pasted_file_OQ3JuY_deseq2_pilot_combined_table.xlsx')
 OUT=ROOT/'examples/deseq2/final'; OUT.mkdir(parents=True,exist_ok=True)
 COMMIT='76c5f8523716804dbe0a9500b4b7e216c6af225c'
-selected=[2,4,6,10,12,14,16,18,20,21,24,25,27,28,29,30,33,35,39,41,43,49,51,57,61]
+selected=[2,4,6,10,12,14,16,18,20,21,25,27,28,29,30,33,35,39,41,43,49,51,57,61]
 # Exact/regex-friendly anchors identify text in the normalized supplied paper; extracted output is the paper text itself.
 anchors={
 2:r'To get a gene-wise dis persion estimate',
@@ -24,7 +24,7 @@ anchors={
 12:r'DESeq2 reports the standard error for each shrunken LFC estimate',
 14:r'We get final dispersion estimates from this model',
 16:r'Theeffectofthezero-centerednor malpriorcanbeunderstood',
-18:r'ThepriorinfluencestheMAPesti mate',
+18:r'The strength of shrinkage does not depend simply',
 20:r'theobservedFisherinformation, orpeakedness',
 21:r'By default, the normalization constants',
 24:r'The strength of shrinkage does not depend simply',
@@ -85,7 +85,7 @@ def excerpt(ref, claim_text, current_row):
     for n in range(a,b+1):
         score=sum(1 for w in words if w in lines[n-1].lower())
         if score>best[0]: best=(score,n)
-    preferred={2:253,4:368,6:1611,10:307,12:451,14:238,16:337,18:337,20:337,21:536,24:1611,25:745,27:865,28:368,29:1198,30:337,33:1112,35:1153,39:178,41:1106,43:944,45:1108,49:1151,51:1151,57:298,61:432}
+    preferred={2:253,4:368,6:1611,10:307,12:451,14:238,16:337,18:337,20:337,21:536,25:745,27:865,28:368,29:1198,30:337,33:1112,35:1153,39:178,41:1106,43:944,45:1108,49:1151,51:1151,57:298,61:432}
     center=preferred.get(current_row,best[1]); start=max(a,center-1); end=min(b,center+2)
     return rel,start,end,''.join(lines[start-1:end])
 
@@ -126,7 +126,7 @@ for idx,row in rows.items():
     if idx in selected_ok: continue
     if idx in nonmethods:
         reason='Dropped: outside the cleaned core 2014 Methods scope (generic testing option, rlog/VST, plotting, benchmark, or downstream analysis).'
-    elif idx in {1,3,5,7,11,13,17,19,22,26,31,34,36,37,38,40,42,44,46,47,48,50,52,53,54,56,58,60,62,64,66,102,103,104,105,106,107}:
+    elif idx in {1,3,5,7,11,13,17,19,22,24,26,31,34,36,37,38,40,42,44,46,47,48,50,52,53,54,56,58,60,62,64,66,102,103,104,105,106,107}:
         reason='Dropped: duplicate/adjacent claim merged into a retained core-method row or no sufficiently direct exact paper sentence for the cleaned target set.'
     else:
         reason='Dropped: retained set capped at a concise core-method case study; source or claim is outside the selected Methods focus.'
