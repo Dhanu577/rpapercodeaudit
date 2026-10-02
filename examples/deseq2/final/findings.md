@@ -10,12 +10,12 @@ The cleaned table retains **24 rows** from the 107-row draft and drops **83 rows
 |---|---:|
 | consistent | 19 |
 | partial | 4 |
-| inconsistent | 1 |
+| inconsistent | 0 |
 | not found | 0 |
-| not verified | 0 |
+| not verified | 1 |
 
 **Rows fully verified with a validated on-disk excerpt:** 24 of 24.
-**Rows not verified:** 0.
+**Rows not verified:** 1.
 **Human verification:** 0 rows; the `Checked by me?` field is `N` for every row.
 
 ## Most interesting inconsistencies and qualifications
@@ -27,11 +27,11 @@ Code quote: Validated code quote: “// sigma is the covariance matrix for the b
 Issue category: implementation differs from described formula
 Source: [src/DESeq2.cpp:451-453](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L451-L453)
 
-### Row 16: Observed Fisher information calculation — **inconsistent**
+### Row 16: Observed Fisher information calculation — **partial**
 Paper: Theeffectofthezero-centerednor malpriorcanbeunderstoodasshrinkingtheMAPLFC estimatesbasedontheamountofinformationtheexperi mentprovidesforthiscoefficient,andwebrieflyelaborate onthishere.
-Why: The paper defines shrinkage using an observed Fisher-information quantity. The cited implementation lines show mean/dispersion-dependent GLM weights and ridge fitting, but do not calculate the paper’s stated observed second derivative as such; the draft claim is therefore inconsistent as written.
+Why: The cited lines calculate negative-binomial GLM working weights that contribute to coefficient-fitting information. They do not themselves calculate or identify observed Fisher information, and they do not show prior-driven MAP shrinkage. The code is related, so the evidence is partial rather than inconsistent.
 Code quote: Validated code quote: “if (useWeights) { w_vec = weights.row(i).t() % mu_hat/(1.0 + alpha_hat(i) * mu_hat); w_sqrt_vec = sqrt(w_vec); } else {”.
-Issue category: implementation differs from described formula
+Issue category: evidence is insufficient for the full observed-Fisher-information and MAP-shrinkage claim
 Source: [src/DESeq2.cpp:336-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L336-L339)
 
 ### Row 18: Relationship between Fisher information and shrinkage — **partial**
@@ -41,11 +41,11 @@ Code quote: Validated code quote: “if (useWeights) { w_vec = weights.row(i).t(
 Issue category: evidence is incomplete for the full prior-based MAP shrinkage claim
 Source: [src/DESeq2.cpp:336-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L336-L339)
 
-### Row 30: Behaviour for very low-count genes — **partial**
+### Row 30: Behaviour for very low-count genes — **not verified**
 Paper: For genes with very low read count, even an estimate of zero LFC is not significant, as the large uncertainty of the estimate does not allow us to exclude that the gene may in truth be more than weakly affected by the experimental condition.
-Why: The low-count behavior is an emergent consequence of GLM weights, uncertainty, and the prior rather than a dedicated low-count rule in the cited code. The direction is plausible, but the implementation does not directly encode the paper sentence as a branch.
+Why: The cited lines calculate GLM working weights only. They do not test significance, determine whether a zero LFC can be excluded, or demonstrate the behavior of very low-count genes. This is a mismatch between the claim and the cited evidence, not proof that the repository lacks the behavior.
 Code quote: Validated code quote: “w_vec = weights.row(i).t() % mu_hat/(1.0 + alpha_hat(i) * mu_hat); w_sqrt_vec = sqrt(w_vec); } else {”.
-Issue category: other
+Issue category: not supported by cited lines
 Source: [src/DESeq2.cpp:337-339](https://github.com/thelovelab/DESeq2/blob/76c5f8523716804dbe0a9500b4b7e216c6af225c/src/DESeq2.cpp#L337-L339)
 
 ### Row 51: Relationship between sample size and shrinkage strength — **partial**
