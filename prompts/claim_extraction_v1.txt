@@ -1,0 +1,9 @@
+# Claim extraction prompt v1
+
+The authoritative runtime prompt is built by `rpapercodeaudit.claim_extraction.build_prompt`.
+This file records the prompt version and its output contract for the methods section.
+
+Output JSON only:
+{"claims": [{"id": "C0001", "verbatim_sentence": "...", "section_or_figure": "...", "claim_type": "...", "what_to_look_for": "..."}]}
+
+The verbatim sentence must be copied exactly from the supplied paper text. Deterministic validation accepts it only after whitespace normalization; no fuzzy matching is allowed.

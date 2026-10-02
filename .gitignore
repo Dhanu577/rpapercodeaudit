@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.cache/
+logs/
+outputs/
+examples/deseq2/repo/
+*.xlsx
+*.zip
+.DS_Store
