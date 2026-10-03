@@ -1,0 +1,869 @@
+{
+  "result_scope": "PARTIAL",
+  "proposals_checked": 63,
+  "accepted": 0,
+  "rejected": 63,
+  "rejections_by_first_failing_stage": {
+    "sentence": 39,
+    "commit": 0,
+    "location": 24
+  },
+  "malformed_model_responses_in_saved_chunks": [],
+  "short_sentence_flags_on_accepted_lt_5_whitespace_tokens": 0,
+  "reference_like_flags_on_accepted": 0,
+  "repo_preparation": {
+    "ok": true,
+    "requested_commit": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+    "resolved_commit": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+    "repo_path": "/home/ubuntu/rpapercodeaudit/examples/deseq2/repo",
+    "error": null
+  },
+  "input_proposals_sha256_before": "a2db70a58ee0ae8575c765defb164b3bd479389abeb4b076ade2cd9676ff537d",
+  "input_proposals_sha256_after": "a2db70a58ee0ae8575c765defb164b3bd479389abeb4b076ade2cd9676ff537d",
+  "input_proposals_unchanged": true,
+  "model": "gemini-3.8-flash",
+  "resolved_version": "gemini-3.8-flash",
+  "settings": {
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+    "temperature": 0,
+    "auth_scheme": "Bearer; key read from GEMINI_API_KEY and never serialized",
+    "paper_path": "examples/deseq2/DESeq.txt",
+    "commit_hash": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+    "completed_chunks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "missing_run1_chunks": [
+      1,
+      8,
+      9
+    ],
+    "run2_state": "incomplete; no successful chunks; no proposals"
+  },
+  "rejections": [
+    {
+      "proposal_index": 2,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "We again employ an empirical Bayes procedure: we first perform ordinary GLM fits to obtain maximum-likelihood estimates (MLEs) for the LFCs and then fit a zero-centered normal distribution to the observed distribution of MLEs over all genes.",
+        "section_or_figure": "Empirical Bayes shrinkage for fold-change estimation",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Initial ordinary GLM fit to obtain MLEs for LFCs, followed by fitting a zero-centered normal distribution prior to the distribution of MLEs across all genes."
+      },
+      "text": "We again employ an empirical Bayes procedure: we first perform ordinary GLM fits to obtain maximum-likelihood estimates (MLEs) for the LFCs and then fit a zero-centered normal distribution to the observed distribution of MLEs over all genes.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 4,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "Furthermore, a standard error for each estimate is reported, which is derived from the posterior’s curvature at its maximum (see Methods for details).",
+        "section_or_figure": "Empirical Bayes shrinkage for fold-change estimation",
+        "claim_type": "formula",
+        "what_to_look_for": "Calculation of standard error of the MAP LFC estimate from the inverse curvature / second derivative of the posterior at its mode (maximum)."
+      },
+      "text": "Furthermore, a standard error for each estimate is reported, which is derived from the posterior’s curvature at its maximum (see Methods for details).",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 6,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "The Wald test P values from the subset of genes that pass an independent filtering step, described in the next section, are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+        "section_or_figure": "Hypothesis tests for differential expression",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Benjamini-Hochberg (BH) adjustment of Wald test p-values only for genes passing the independent filtering step."
+      },
+      "text": "The Wald test P values from the subset of genes that pass an independent filtering step, described in the next section, are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 7,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "DESeq2 uses the average expression strength of each gene, across all samples, as its filter criterion, and it omits all genes with mean normalized counts below a filtering threshold from multiple testing adjustment.",
+        "section_or_figure": "Automatic independent filtering",
+        "claim_type": "filtering",
+        "what_to_look_for": "Use of mean normalized counts across all samples as the filter criterion, omitting genes below the threshold from multiple testing adjustment."
+      },
+      "text": "DESeq2 uses the average expression strength of each gene, across all samples, as its filter criterion, and it omits all genes with mean normalized counts below a filtering threshold from multiple testing adjustment.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 10,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "Note the lack of LFC shrinkage: to find genes with weak differential expression, DESeq2 requires that the LFC shrinkage has been disabled.",
+        "section_or_figure": "Specifyingmaximumeffect size",
+        "claim_type": "filtering",
+        "what_to_look_for": "Verification that LFC shrinkage is disabled when testing the composite null hypothesis |beta_ir| >= theta."
+      },
+      "text": "Note the lack of LFC shrinkage: to find genes with weak differential expression, DESeq2 requires that the LFC shrinkage has been disabled.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 11,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "DESeq2 flags, for each gene, those samples that have a Cook’s distance greater than the 0.99 quantile of the F(p, m −p) distribution, where p is the number of model parameters including the intercept, and m is the number of samples.",
+        "section_or_figure": "Detection of count outliers",
+        "claim_type": "filtering",
+        "what_to_look_for": "Cook's distance threshold calculation using qf(0.99, df1 = p, df2 = m - p)."
+      },
+      "text": "DESeq2 flags, for each gene, those samples that have a Cook’s distance greater than the 0.99 quantile of the F(p, m −p) distribution, where p is the number of model parameters including the intercept, and m is the number of samples.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 15,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "The rlog transformation is calculated by fitting for each gene a GLM with a baseline expression (i.e., intercept only) and, computing for each sample, shrunken LFCs with respect to the baseline, using the same empirical Bayes procedure as before (Methods).",
+        "section_or_figure": "Regularized logarithm transformation",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Implementation of rlog transformation fitting an intercept-only GLM per gene and calculating sample-specific shrunken LFCs."
+      },
+      "text": "The rlog transformation is calculated by fitting for each gene a GLM with a baseline expression (i.e., intercept only) and, computing for each sample, shrunken LFCs with respect to the baseline, using the same empirical Bayes procedure as before (Methods).",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 16,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "Both the rlog transformation and theVST are provided in theDESeq2 package.",
+        "section_or_figure": "Regularized logarithm transformation",
+        "claim_type": "input_output",
+        "what_to_look_for": "Presence and availability of `rlog` and `vst` / `varianceStabilizingTransformation` functions in the DESeq2 package."
+      },
+      "text": "Both the rlog transformation and theVST are provided in theDESeq2 package.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 17,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "For all algorithms returning P values, the P values from genes with non-zero sum of read counts across samples were adjusted using the Benjamini–Hochberg procedure [21].",
+        "section_or_figure": "Comparative benchmarks",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "p.adjust(..., method='BH') applied only to genes where rowSums(counts) > 0"
+      },
+      "text": "For all algorithms returning P values, the P values from genes with non-zero sum of read counts across samples were adjusted using the Benjamini–Hochberg procedure [21].",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 19,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "To simulate data with realistic moments, the mean and dispersions were drawn from the joint distribution of means and gene-wise dispersion estimates from the Pickrell et al. data, fitting only an intercept term.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Sampling pairs of (mean, dispersion) from joint empirical distribution estimated from Pickrell dataset fitted with intercept only (~ 1)"
+      },
+      "text": "To simulate data with realistic moments, the mean and dispersions were drawn from the joint distribution of means and gene-wise dispersion estimates from the Pickrell et al. data, fitting only an intercept term.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 22,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "The sensitivity was calculated as the fraction of genes with adjusted P value < 0.1 among the genes with true differences between group means.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "formula",
+        "what_to_look_for": "Sensitivity calculation: sum(padj < 0.1 & is_DE) / sum(is_DE)"
+      },
+      "text": "The sensitivity was calculated as the fraction of genes with adjusted P value < 0.1 among the genes with true differences between group means.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 23,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "The precision was calculated as the fraction of genes with true differences between group means among those with adjusted P value < 0.1.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "formula",
+        "what_to_look_for": "Precision calculation: sum(padj < 0.1 & is_DE) / sum(padj < 0.1)"
+      },
+      "text": "The precision was calculated as the fraction of genes with true differences between group means among those with adjusted P value < 0.1.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 24,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "We note that EBSeq version 1.4.0 by default removes low-count genes– whose 75% quantile of normalized counts is less than ten– before calling differential expression.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "filtering",
+        "what_to_look_for": "Filtering rule in EBSeq: quantile(norm_counts, 0.75) < 10 excluded"
+      },
+      "text": "We note that EBSeq version 1.4.0 by default removes low-count genes– whose 75% quantile of normalized counts is less than ten– before calling differential expression.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 25,
+      "proposal": {
+        "id": "C0009",
+        "verbatim_sentence": "We chose a set of 26 RNA-seq samples of the same read length (46 base pairs) from male individuals.",
+        "section_or_figure": "Benchmark for RNA sequencing data - False positive rate",
+        "claim_type": "filtering",
+        "what_to_look_for": "Selection of 26 samples from Pickrell et al. filtering for read_length == 46 and gender == 'male'"
+      },
+      "text": "We chose a set of 26 RNA-seq samples of the same read length (46 base pairs) from male individuals.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 27,
+      "proposal": {
+        "id": "C0011",
+        "verbatim_sentence": "We estimated the false positive rate associated with a critical value of 0.01 by dividing the number of P values less than 0.01 by the total number of tests; genes with zero sum of read counts across samples were excluded.",
+        "section_or_figure": "Benchmark for RNA sequencing data - False positive rate",
+        "claim_type": "formula",
+        "what_to_look_for": "FPR formula: sum(pvalue < 0.01) / sum(rowSums(counts) > 0) excluding rowSums == 0"
+      },
+      "text": "We estimated the false positive rate associated with a critical value of 0.01 by dividing the number of P values less than 0.01 by the total number of tests; genes with zero sum of read counts across samples were excluded.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 28,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "For notational simplicity, the equations here use the natural logarithm as the link function, though the DESeq2 software reports estimated model coefficients and their estimated standard errors on the log2 scale.",
+        "section_or_figure": "Model and normalization",
+        "claim_type": "input_output",
+        "what_to_look_for": "Verification that DESeq2 reports estimated model coefficients and their standard errors transformed to the log2 scale, while using the natural log in underlying equations."
+      },
+      "text": "For notational simplicity, the equations here use the natural logarithm as the link function, though the DESeq2 software reports estimated model coefficients and their estimated standard errors on the log2 scale.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 29,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "By default, the normalization constants sij are considered constant within a sample, sij = sj,andareestimated with the median-of-ratios method previously described and used in DESeq [4] and DEXSeq [30]:",
+        "section_or_figure": "Model and normalization",
+        "claim_type": "defaults",
+        "what_to_look_for": "Verification that default normalization constants sij are sample-specific constants sj estimated using the median-of-ratios method."
+      },
+      "text": "By default, the normalization constants sij are considered constant within a sample, sij = sj,andareestimated with the median-of-ratios method previously described and used in DESeq [4] and DEXSeq [30]:",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 30,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "To recover the desirable symmetry between all levels, DESeq2 uses expanded design matrices, which include an indicator variable for each level of each factor, in addition to an intercept column (i.e., none of the levels is absorbed into the intercept).",
+        "section_or_figure": "Expanded design matrices",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Verification that expanded design matrices contain an indicator variable for every factor level plus an intercept column."
+      },
+      "text": "To recover the desirable symmetry between all levels, DESeq2 uses expanded design matrices, which include an indicator variable for each level of each factor, in addition to an intercept column (i.e., none of the levels is absorbed into the intercept).",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 31,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "For dispersion estimation and for estimating the width of the LFC prior, standard design matrices are used.",
+        "section_or_figure": "Expanded design matrices",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Check that standard (non-expanded) design matrices are used during dispersion estimation and during LFC prior width estimation."
+      },
+      "text": "For dispersion estimation and for estimating the width of the LFC prior, standard design matrices are used.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 32,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "We assume the dispersion parameter αi follows a lognormal prior distribution that is centered around a trend that depends on the gene's mean normalized read count: log αi ∼ N logαtr(¯μi), σ2 d .",
+        "section_or_figure": "Estimation of dispersions",
+        "claim_type": "formula",
+        "what_to_look_for": "Verification of prior distribution log αi ~ N(log αtr(bar_mu_i), sigma_d^2) for dispersion parameter."
+      },
+      "text": "We assume the dispersion parameter αi follows a lognormal prior distribution that is centered around a trend that depends on the gene's mean normalized read count: log αi ∼ N logαtr(¯μi), σ2 d .",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 33,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "For the trend function, we use the same parametrization as we used for DEXSeq [30], namely, αtr( ¯μ) = a1 ¯ μ +α0.",
+        "section_or_figure": "Estimation of dispersions",
+        "claim_type": "formula",
+        "what_to_look_for": "Check that the dispersion trend parametrization function is α_tr(bar_mu) = a_1 / bar_mu + a_0."
+      },
+      "text": "For the trend function, we use the same parametrization as we used for DEXSeq [30], namely, αtr( ¯μ) = a1 ¯ μ +α0.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 34,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "To get a gene-wise dispersion estimate for a gene i, we start by fitting a negative binomial GLM without an LFC prior for the design matrix X to the gene's count data.",
+        "section_or_figure": "Gene-wise dispersion estimates",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Initial GLM fitting without an LFC prior to obtain gene-wise dispersion estimate."
+      },
+      "text": "To get a gene-wise dispersion estimate for a gene i, we start by fitting a negative binomial GLM without an LFC prior for the design matrix X to the gene's count data.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 39,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "Therefore, the prior variance σ2 d is obtained by subtracting the expected sampling variance from an estimate of the variance of the logarithmic residuals, s2 lr :\nσ2 d = max s2 lr −ψ1((m−p)/2), 0.25 .",
+        "section_or_figure": "Dispersion prior",
+        "claim_type": "formula",
+        "what_to_look_for": "Prior variance calculated as max(s_lr^2 - trigamma((m - p)/2), 0.25)"
+      },
+      "text": "Therefore, the prior variance σ2 d is obtained by subtracting the expected sampling variance from an estimate of the variance of the logarithmic residuals, s2 lr :\nσ2 d = max s2 lr −ψ1((m−p)/2), 0.25 .",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 40,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "To avoid inflation of σ2 d due to dispersion outliers (i.e., genes not well captured by this prior; see below), we use a robust estimator for the standard deviation slr of the logarithmic residuals,\nslr = mad\nlog αgw\n−logαtr( ¯μi) ,\nwhere mad stands for the median absolute deviation, divided as usual by the scaling factor −1(3/4).",
+        "section_or_figure": "Dispersion prior",
+        "claim_type": "formula",
+        "what_to_look_for": "slr estimated using MAD of log residuals divided by normal quantile scale factor (approx 1.4826)"
+      },
+      "text": "To avoid inflation of σ2 d due to dispersion outliers (i.e., genes not well captured by this prior; see below), we use a robust estimator for the standard deviation slr of the logarithmic residuals,\nslr = mad\nlog αgw\n−logαtr( ¯μi) ,\nwhere mad stands for the median absolute deviation, divided as usual by the scaling factor −1(3/4).",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 41,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "When there are three or less residual degrees of freedom (number of samples minus number of parameters to estimate), the estimation of the prior variance σ2 d using the observed variance of logarithmic residuals s2 lr tends to underestimate σ2 d. In this case, we instead estimate the prior variance through simulation.",
+        "section_or_figure": "Threeorlessresidualsdegrees of freedom",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Condition residual df <= 3 triggers estimation of prior variance via simulation instead of residual variance formula"
+      },
+      "text": "When there are three or less residual degrees of freedom (number of samples minus number of parameters to estimate), the estimation of the prior variance σ2 d using the observed variance of logarithmic residuals s2 lr tends to underestimate σ2 d. In this case, we instead estimate the prior variance through simulation.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 42,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "We repeat the simulation over a grid of values for σ2 d, and select the value that minimizes the Kullback–Leibler divergence from the observed density of logarithmic residuals to the simulated density.",
+        "section_or_figure": "Threeorlessresidualsdegrees of freedom",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Grid search over sigma^2_d minimizing Kullback-Leibler divergence between observed log-residuals and simulated density"
+      },
+      "text": "We repeat the simulation over a grid of values for σ2 d, and select the value that minimizes the Kullback–Leibler divergence from the observed density of logarithmic residuals to the simulated density.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 43,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "Therefore, we use the heuristic of considering a gene as a dispersion outlier, if the residual from the trend fit is more than two standard deviations of logarithmic residuals, slr (see Equation (8)), above the fit, i.e., if\nlog αgw i >logαtr(¯μi) + 2slr.",
+        "section_or_figure": "Dispersion outliers",
+        "claim_type": "filtering",
+        "what_to_look_for": "Outlier check: log(alpha_gw_i) > log(alpha_tr(mu_i)) + 2 * slr"
+      },
+      "text": "Therefore, we use the heuristic of considering a gene as a dispersion outlier, if the residual from the trend fit is more than two standard deviations of logarithmic residuals, slr (see Equation (8)), above the fit, i.e., if\nlog αgw i >logαtr(¯μi) + 2slr.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 44,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "Instead of the MAP value , we use the gene-wise estimate αgw i as a final dispersion value in the subsequent steps.",
+        "section_or_figure": "Dispersion outliers",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Use gene-wise dispersion estimate alpha_gw instead of alpha_MAP for dispersion outliers"
+      },
+      "text": "Instead of the MAP value , we use the gene-wise estimate αgw i as a final dispersion value in the subsequent steps.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 49,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "The Wald test compares the beta estimate βir divided by its estimated standard error SE(βir) to a standard normal distribution.",
+        "section_or_figure": "Wald test",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Calculation of Wald test statistic as beta estimate divided by standard error, compared against standard normal distribution."
+      },
+      "text": "The Wald test compares the beta estimate βir divided by its estimated standard error SE(βir) to a standard normal distribution.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 51,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "The Wald test P values from the subset of genes that pass the independent filtering step are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+        "section_or_figure": "Wald test",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "p.adjust method set to 'BH' or 'fdr' on the subset of filtered genes."
+      },
+      "text": "The Wald test P values from the subset of genes that pass the independent filtering step are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 52,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "The filter statistic in DESeq2 is the mean of normalized counts for a gene, while the test statistic is p, the P value from the Wald test.",
+        "section_or_figure": "Independent filtering",
+        "claim_type": "filtering",
+        "what_to_look_for": "Use of baseMean (mean of normalized counts) as the filter statistic for independent filtering."
+      },
+      "text": "The filter statistic in DESeq2 is the mean of normalized counts for a gene, while the test statistic is p, the P value from the Wald test.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 53,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "Two-tailed P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from |βir| toward ∞. The value of the integral is then multiplied by 2 and thresholded at 1.",
+        "section_or_figure": "Composite null hypotheses",
+        "claim_type": "formula",
+        "what_to_look_for": "Implementation of composite null hypothesis testing (|beta| <= theta): integration from |beta| to Inf of N(theta, SE^2), multiplied by 2, capped at 1 (pmin(..., 1))."
+      },
+      "text": "Two-tailed P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from |βir| toward ∞. The value of the integral is then multiplied by 2 and thresholded at 1.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 54,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "Conversely, when searching for genes whose absolute LFC is significantly below a threshold, i.e., when testing the null hypothesis H0 : |βir| ≥ θ, the P value is constructed as the maximum of two one-sided tests of the simple null hypotheses: H0a : βir = θ and H0b : βir = −θ.",
+        "section_or_figure": "Composite null hypotheses",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Testing H0: |beta| >= theta via pmax of two one-sided tests at theta and -theta."
+      },
+      "text": "Conversely, when searching for genes whose absolute LFC is significantly below a threshold, i.e., when testing the null hypothesis H0 : |βir| ≥ θ, the P value is constructed as the maximum of two one-sided tests of the simple null hypotheses: H0a : βir = θ and H0b : βir = −θ.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 55,
+      "proposal": {
+        "id": "C0007",
+        "verbatim_sentence": "The one-sided P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from βir toward −∞, and integrating a normal distribution centered on −θ with standard deviation SE(βir) from βir toward ∞.",
+        "section_or_figure": "Composite null hypotheses",
+        "claim_type": "formula",
+        "what_to_look_for": "Calculation of one-sided p-values: pnorm(beta, mean=theta, sd=SE) and pnorm(beta, mean=-theta, sd=SE, lower.tail=FALSE)."
+      },
+      "text": "The one-sided P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from βir toward −∞, and integrating a normal distribution centered on −θ with standard deviation SE(βir) from βir toward ∞.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 58,
+      "proposal": {
+        "id": "C0010",
+        "verbatim_sentence": "Second, when interaction terms are included and all factors have two levels, then standard design matrices are used rather than expanded model matrices, such that only a single term is used to test the null hypothesis that a combination of two effects is merely additive in the logarithmic scale.",
+        "section_or_figure": "Interactions",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Condition checking if all factors have 2 levels in interaction designs to avoid expanded model matrices and use standard design matrix."
+      },
+      "text": "Second, when interaction terms are included and all factors have two levels, then standard design matrices are used rather than expanded model matrices, such that only a single term is used to test the null hypothesis that a combination of two effects is merely additive in the logarithmic scale.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 59,
+      "proposal": {
+        "id": "C0011",
+        "verbatim_sentence": "For unsupervised analyses, for instance sample quality assessment, it is desirable that the experimental design has no influence on the transformation, and hence DESeq2 by default ignores the design matrix and re-estimates the dispersions treating all samples as replicates, i.e., it uses blind dispersion estimation.",
+        "section_or_figure": "Regularized logarithm",
+        "claim_type": "defaults",
+        "what_to_look_for": "Default parameter `blind = TRUE` in rlog function, re-estimating dispersions treating all samples as replicates (design ~ 1)."
+      },
+      "text": "For unsupervised analyses, for instance sample quality assessment, it is desirable that the experimental design has no influence on the transformation, and hence DESeq2 by default ignores the design matrix and re-estimates the dispersions treating all samples as replicates, i.e., it uses blind dispersion estimation.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 60,
+      "proposal": {
+        "id": "C0012",
+        "verbatim_sentence": "The prior variance is found by matching the 97.5% quantile of a zero-centered normal distribution to the 95% quantile of the absolute values in the LFC matrix.",
+        "section_or_figure": "Regularized logarithm",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Computation of prior variance in rlog by matching the 0.975 quantile of a normal distribution to the 0.95 quantile of absolute LFCs."
+      },
+      "text": "The prior variance is found by matching the 97.5% quantile of a zero-centered normal distribution to the 95% quantile of the absolute values in the LFC matrix.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 62,
+      "proposal": {
+        "id": "C0014",
+        "verbatim_sentence": "The count matrix and metadata, including the gene model and sample information, are stored in an S4 class derived from the SummarizedExperiment class of the GenomicRanges package [60].",
+        "section_or_figure": "R/Bioconductor package",
+        "claim_type": "input_output",
+        "what_to_look_for": "DESeqDataSet class inheritance from SummarizedExperiment."
+      },
+      "text": "The count matrix and metadata, including the gene model and sample information, are stored in an S4 class derived from the SummarizedExperiment class of the GenomicRanges package [60].",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 63,
+      "proposal": {
+        "id": "C0015",
+        "verbatim_sentence": "A single function, called DESeq, is used to run the default analysis, while lower-level functions are also available for advanced users.",
+        "section_or_figure": "R/Bioconductor package",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Top-level wrapper function named DESeq in the R package executing the differential expression analysis workflow."
+      },
+      "text": "A single function, called DESeq, is used to run the default analysis, while lower-level functions are also available for advanced users.",
+      "first_failing_stage": "sentence",
+      "raw_validator_error": "verbatim_sentence is not an exact substring after whitespace normalization"
+    },
+    {
+      "proposal_index": 1,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "DESeq2 handles these cases by using the gene-wise estimate instead of the shrunken estimate when the former is more than 2 residual standard deviations above the curve.",
+        "section_or_figure": "Note that in Figure 1 a number of genes with gene wise dispersion estimates below the curve...",
+        "claim_type": "filtering",
+        "what_to_look_for": "Dispersion outlier threshold checking if gene-wise dispersion is > 2 residual standard deviations above the fitted curve, replacing the shrunken estimate with the gene-wise estimate."
+      },
+      "text": "DESeq2 handles these cases by using the gene-wise estimate instead of the shrunken estimate when the former is more than 2 residual standard deviations above the curve.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 3,
+      "proposal": {
+        "id": "C0003",
+        "verbatim_sentence": "This distribution is used as a prior on LFCs in a second round of GLM fits, and the MAP estimates are kept as final estimates of LFC.",
+        "section_or_figure": "Empirical Bayes shrinkage for fold-change estimation",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Second round of GLM fits with the zero-centered normal distribution as prior on LFCs, extracting MAP estimates as final LFCs."
+      },
+      "text": "This distribution is used as a prior on LFCs in a second round of GLM fits, and the MAP estimates are kept as final estimates of LFC.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 5,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "For significance testing, DESeq2 uses a Wald test: the shrunken estimate of LFC is divided by its standard error, resulting in a z-statistic, which is compared to a standard normal distribution.",
+        "section_or_figure": "Hypothesis tests for differential expression",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Wald test calculating z = shrunken LFC / SE, evaluated against a standard normal distribution."
+      },
+      "text": "For significance testing, DESeq2 uses a Wald test: the shrunken estimate of LFC is divided by its standard error, resulting in a z-statistic, which is compared to a standard normal distribution.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 8,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "DESeq2 by default will choose a threshold that maximizes the number of genes found at a user-specified target FDR.",
+        "section_or_figure": "Automatic independent filtering",
+        "claim_type": "defaults",
+        "what_to_look_for": "Default threshold selection algorithm for independent filtering maximizing the number of rejected hypotheses at the target FDR (e.g. alpha)."
+      },
+      "text": "DESeq2 by default will choose a threshold that maximizes the number of genes found at a user-specified target FDR.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 9,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "DESeq2 offers tests for composite null hypotheses of the form |βir|≤θ,whereβir is the shrunken LFC from the estimation procedure described above.",
+        "section_or_figure": "Main text, Section: Tests of log2 fold change",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Test procedure for composite null hypothesis |beta_ir| <= theta using shrunken LFCs."
+      },
+      "text": "DESeq2 offers tests for composite null hypotheses of the form |βir|≤θ,whereβir is the shrunken LFC from the estimation procedure described above.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 12,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "However, if there are two or fewer replicates for a condition, these samplesdonotcontribute to outlier detection, as thereare insufficient replicates to determine outlier status.",
+        "section_or_figure": "Detection of count outliers",
+        "claim_type": "filtering",
+        "what_to_look_for": "Condition checking if replicate count <= 2 to exclude samples from Cook's distance outlier detection."
+      },
+      "text": "However, if there are two or fewer replicates for a condition, these samplesdonotcontribute to outlier detection, as thereare insufficient replicates to determine outlier status.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 13,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "By default, outliers in conditions withsix or fewer replicatescausethewholegenetobeflaggedandremoved from subsequent analysis, including P value adjustment for multiple testing.",
+        "section_or_figure": "Detection of count outliers",
+        "claim_type": "defaults",
+        "what_to_look_for": "Default threshold of <= 6 replicates causing entire gene to be flagged/removed with NA p-value and adjusted p-value."
+      },
+      "text": "By default, outliers in conditions withsix or fewer replicatescausethewholegenetobeflaggedandremoved from subsequent analysis, including P value adjustment for multiple testing.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 14,
+      "proposal": {
+        "id": "C0006",
+        "verbatim_sentence": "For conditions that contain seven or more replicates, DESeq2 replaces the outlier counts with an imputed value, namely the trimmed mean over all samples, scaled by the size factor, and then re-estimates the dispersion, LFCs and P values for these genes.",
+        "section_or_figure": "Detection of count outliers",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Outlier replacement logic for conditions with >= 7 replicates: imputation by trimmed mean across samples scaled by size factor, followed by refitting dispersion, LFCs, and p-values."
+      },
+      "text": "For conditions that contain seven or more replicates, DESeq2 replaces the outlier counts with an imputed value, namely the trimmed mean over all samples, scaled by the size factor, and then re-estimates the dispersion, LFCs and P values for these genes.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 18,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "We simulated datasets of 10,000 genes with negative binomial distributed counts.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "parameters",
+        "what_to_look_for": "Simulation parameter setting number of genes to 10000 with negative binomial distribution"
+      },
+      "text": "We simulated datasets of 10,000 genes with negative binomial distributed counts.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 20,
+      "proposal": {
+        "id": "C0004",
+        "verbatim_sentence": "These datasets were of varying total sample size (m ∈ {6, 8, 10, 20}), and the samples were split into two equal sized groups; 80% of the simulated genes had no true differential expression, while for 20% of the genes, true fold changes of 2, 3 and 4 were used to generate counts across the two groups, with the direction of fold change chosen randomly.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "parameters",
+        "what_to_look_for": "Sample sizes m in c(6, 8, 10, 20); equal group sizes (m/2 vs m/2); 80% non-DE genes (p0=0.8); 20% DE genes with fold changes of 2, 3, 4 with random direction (+/- sign or reciprocal)"
+      },
+      "text": "These datasets were of varying total sample size (m ∈ {6, 8, 10, 20}), and the samples were split into two equal sized groups; 80% of the simulated genes had no true differential expression, while for 20% of the genes, true fold changes of 2, 3 and 4 were used to generate counts across the two groups, with the direction of fold change chosen randomly.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 21,
+      "proposal": {
+        "id": "C0005",
+        "verbatim_sentence": "The simulated differentially expressed genes were chosen uniformly at random among all the genes, throughout the range of mean counts.",
+        "section_or_figure": "Benchmarks through simulation - Sensitivity and precision",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Uniform random selection of DE gene indices among all simulated genes"
+      },
+      "text": "The simulated differentially expressed genes were chosen uniformly at random among all the genes, throughout the range of mean counts.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 26,
+      "proposal": {
+        "id": "C0010",
+        "verbatim_sentence": "We randomly drew without replacement ten samples from the set to compare five against five, and this process was repeated 30 times.",
+        "section_or_figure": "Benchmark for RNA sequencing data - False positive rate",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Random draw without replacement of 10 samples (5 vs 5) repeated for 30 iterations"
+      },
+      "text": "We randomly drew without replacement ten samples from the set to compare five against five, and this process was repeated 30 times.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 35,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "This GLM uses a rough method-of-moments estimate of dispersion, based on the within-group variances and means.",
+        "section_or_figure": "Gene-wise dispersion estimates",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Initial negative binomial GLM uses method-of-moments dispersion estimate based on within-group variances and means."
+      },
+      "text": "This GLM uses a rough method-of-moments estimate of dispersion, based on the within-group variances and means.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 36,
+      "proposal": {
+        "id": "C0009",
+        "verbatim_sentence": "We then maximize the Cox–Reid adjusted likelihood of the dispersion, conditioned on the fitted values ˆμ0 ij from the initial fit, to obtain the gene-wise estimate αgw i",
+        "section_or_figure": "Gene-wise dispersion estimates",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Cox-Reid adjusted likelihood is maximized conditional on initial fitted values mu_hat_0 to obtain alpha_gw_i."
+      },
+      "text": "We then maximize the Cox–Reid adjusted likelihood of the dispersion, conditioned on the fitted values ˆμ0 ij from the initial fit, to obtain the gene-wise estimate αgw i",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 37,
+      "proposal": {
+        "id": "C0001",
+        "verbatim_sentence": "The optimization in Equation (7) is performed on the scale of logα using a backtracking line search with accepted proposals that satisfy Armijo conditions [50].",
+        "section_or_figure": "Dispersion trend",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Backtracking line search satisfying Armijo conditions optimizing log(alpha) for Cox-Reid adjusted profile likelihood"
+      },
+      "text": "The optimization in Equation (7) is performed on the scale of logα using a backtracking line search with accepted proposals that satisfy Armijo conditions [50].",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 38,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "The hyperparameters a1 and α0 of (6) are obtained by iteratively fitting a gamma-family GLM. At each iteration, genes with a ratio of dispersion to fitted value outside the range [10−4,15]are left out until thesumofsquared LFCs of the newcoefficients over the old coefficients is less than 10−6 (same approach as in DEXSeq [30]).",
+        "section_or_figure": "Dispersion trend",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Iterative gamma GLM fit filtering genes with dispersion / fitted value outside [1e-4, 15] until sum of squared LFCs of new over old coefficients < 1e-6"
+      },
+      "text": "The hyperparameters a1 and α0 of (6) are obtained by iteratively fitting a gamma-family GLM. At each iteration, genes with a ratio of dispersion to fitted value outside the range [10−4,15]are left out until thesumofsquared LFCs of the newcoefficients over the old coefficients is less than 10−6 (same approach as in DEXSeq [30]).",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 45,
+      "proposal": {
+        "id": "C0009",
+        "verbatim_sentence": "Tomakethefitrobustagainstoutlierswithveryhigh absoluteLFCvalues,weusequantilematching:thewidth σr ischosensuchthatthe(1−p)empiricalquantileofthe absolutevalueof theobservedLFCs, ⃗βMLE r ,matchesthe (1−p/2)theoreticalquantileoftheprior,N(0,σ2r ),where pissetbydefaultto0.05.",
+        "section_or_figure": "Empiricalpriorestimate",
+        "claim_type": "defaults",
+        "what_to_look_for": "Quantile matching for LFC prior width using default p = 0.05"
+      },
+      "text": "Tomakethefitrobustagainstoutlierswithveryhigh absoluteLFCvalues,weusequantilematching:thewidth σr ischosensuchthatthe(1−p)empiricalquantileofthe absolutevalueof theobservedLFCs, ⃗βMLE r ,matchesthe (1−p/2)theoreticalquantileoftheprior,N(0,σ2r ),where pissetbydefaultto0.05.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 46,
+      "proposal": {
+        "id": "C0010",
+        "verbatim_sentence": "Toensurethatthepriorwidthσrwillbeindependentof thechoiceofbaselevel, theestimatesfromthequantile matchingprocedureareaveragedforeachfactoroverall possiblecontrastsoffactorlevels.",
+        "section_or_figure": "Empiricalpriorestimate",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Averaging quantile matching estimates over all pairwise contrasts of factor levels"
+      },
+      "text": "Toensurethatthepriorwidthσrwillbeindependentof thechoiceofbaselevel, theestimatesfromthequantile matchingprocedureareaveragedforeachfactoroverall possiblecontrastsoffactorlevels.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 47,
+      "proposal": {
+        "id": "C0011",
+        "verbatim_sentence": "Whendeterminingthe empiricalupperquantile,extremeLFCvalues(βMLE ir > log(2)10,or10onthebase2scale)areexcluded.",
+        "section_or_figure": "Empiricalpriorestimate",
+        "claim_type": "filtering",
+        "what_to_look_for": "Exclusion of extreme MLE LFC values > log(2)*10 (i.e. abs(beta) > 10 in log2 scale) when computing empirical quantile"
+      },
+      "text": "Whendeterminingthe empiricalupperquantile,extremeLFCvalues(βMLE ir > log(2)10,or10onthebase2scale)areexcluded.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 48,
+      "proposal": {
+        "id": "C0012",
+        "verbatim_sentence": "Theterm (β), i.e.,thelogarithmofthedensityofthe normal prior (uptoanadditiveconstant), canbe read asaridgepenalty term, andtherefore,weperformthe optimizationusingtheiterativelyreweightedridgeregres sionalgorithm[56],alsoknownasweightedupdates[57].",
+        "section_or_figure": "Finalestimateof logarithmicfoldchanges",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Optimization of LFC posterior via iteratively reweighted ridge regression algorithm / weighted updates"
+      },
+      "text": "Theterm (β), i.e.,thelogarithmofthedensityofthe normal prior (uptoanadditiveconstant), canbe read asaridgepenalty term, andtherefore,weperformthe optimizationusingtheiterativelyreweightedridgeregres sionalgorithm[56],alsoknownasweightedupdates[57].",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 50,
+      "proposal": {
+        "id": "C0002",
+        "verbatim_sentence": "The tail integrals of the standard normal distribution are multiplied by 2 to achieve a two-tailed test.",
+        "section_or_figure": "Wald test",
+        "claim_type": "statistical_test",
+        "what_to_look_for": "Computation of two-tailed p-values by multiplying standard normal tail probabilities by 2."
+      },
+      "text": "The tail integrals of the standard normal distribution are multiplied by 2 to achieve a two-tailed test.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 56,
+      "proposal": {
+        "id": "C0008",
+        "verbatim_sentence": "DESeq2 requires that no prior has been used when testing the null hypothesis of large LFCs, so that the data alone must provide evidence against the null hypothesis.",
+        "section_or_figure": "Composite null hypotheses",
+        "claim_type": "filtering",
+        "what_to_look_for": "Assertion/check that no prior (betaPrior = FALSE) was used when testing null hypothesis of large LFCs."
+      },
+      "text": "DESeq2 requires that no prior has been used when testing the null hypothesis of large LFCs, so that the data alone must provide evidence against the null hypothesis.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 57,
+      "proposal": {
+        "id": "C0009",
+        "verbatim_sentence": "First, when any interaction terms are included in the design, the LFC prior width for main effect terms is not estimated from the data, but set to a wide value (σ2r = (log(2))2 1000, or 1000 on the base 2 scale).",
+        "section_or_figure": "Interactions",
+        "claim_type": "defaults",
+        "what_to_look_for": "Check whether prior variance for main effects in presence of interaction terms is fixed to (log(2))^2 * 1000 or 1000 on base 2 scale."
+      },
+      "text": "First, when any interaction terms are included in the design, the LFC prior width for main effect terms is not estimated from the data, but set to a wide value (σ2r = (log(2))2 1000, or 1000 on the base 2 scale).",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    },
+    {
+      "proposal_index": 61,
+      "proposal": {
+        "id": "C0013",
+        "verbatim_sentence": "The MLE of ⃗βi is used for calculating Cook’s distance.",
+        "section_or_figure": "Cook’s distance for outlier detection",
+        "claim_type": "algorithm",
+        "what_to_look_for": "Cook's distance calculated using maximum likelihood estimates (unshrunk MLEs) of beta coefficients."
+      },
+      "text": "The MLE of ⃗βi is used for calculating Cook’s distance.",
+      "first_failing_stage": "location",
+      "raw_validator_error": "invalid location: 'code_file'"
+    }
+  ],
+  "accepted_proposals": []
+}

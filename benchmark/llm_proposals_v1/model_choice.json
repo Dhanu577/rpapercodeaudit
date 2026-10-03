@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-03T10:44:48.626353+00:00",
+  "requested_model": "gemini-3.8-flash",
+  "attempts": [
+    {
+      "attempt": 1,
+      "http_status": 200,
+      "response_model_field": "gemini-3.8-flash",
+      "reply_text": "\"OK\"",
+      "llm_client_parse_error": "LLM JSON response must be an object"
+    }
+  ],
+  "model_selected": "gemini-3.8-flash",
+  "resolved_version": "gemini-3.8-flash",
+  "settings": {
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+    "temperature": 0,
+    "authentication": "Bearer token sourced from GEMINI_API_KEY; secret value omitted"
+  },
+  "selection_reason": "The actual API call returned HTTP 200 and the response model field matched gemini-3.8-flash. The probe reply was a JSON scalar, which LLMClient.complete_json rejects; the extraction-format pilot is evaluated separately."
+}

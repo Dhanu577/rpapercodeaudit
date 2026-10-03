@@ -1,0 +1,65 @@
+[
+  {
+    "id": "C0001",
+    "verbatim_sentence": "We model read counts Kij as following a negative binomial distribution (sometimes also called a gamma-Poisson distribution) with mean μij and dispersion αi.",
+    "section_or_figure": "Model and normalization",
+    "claim_type": "formula",
+    "what_to_look_for": "Negative binomial / gamma-Poisson distribution assumption for read counts K_ij with mean mu_ij and dispersion alpha_i"
+  },
+  {
+    "id": "C0002",
+    "verbatim_sentence": "The mean is taken as a quantity qij, proportional to the concentration of cDNA fragments from the gene in the sample, scaled by a normalization factor sij, i.e., μij = sijqij.",
+    "section_or_figure": "Model and normalization",
+    "claim_type": "formula",
+    "what_to_look_for": "Mean formulation mu_ij = s_ij * q_ij scaling concentration q_ij by normalization factor / size factor s_ij"
+  },
+  {
+    "id": "C0003",
+    "verbatim_sentence": "To estimate these size factors, the DESeq2 package offers the median-of-ratios method already used in DESeq [4].",
+    "section_or_figure": "Model and normalization",
+    "claim_type": "algorithm",
+    "what_to_look_for": "Implementation of median-of-ratios method to estimate sample size factors s_j"
+  },
+  {
+    "id": "C0004",
+    "verbatim_sentence": "We use GLMs with a logarithmic link, log2qij = r xjrβir, with design matrix elements xjr and coefficients βir.",
+    "section_or_figure": "Model and normalization",
+    "claim_type": "formula",
+    "what_to_look_for": "GLM log2 link function log2(q_ij) = sum_r (x_jr * beta_ir) using base-2 logarithm and design matrix x"
+  },
+  {
+    "id": "C0005",
+    "verbatim_sentence": "Within-group variability, i.e., the variability between replicates, is modeled by the dispersion parameter αi, which describes the variance of counts via VarKij = μij + αiμ2 ij .",
+    "section_or_figure": "Empirical Bayes shrinkage for dispersion estimation",
+    "claim_type": "formula",
+    "what_to_look_for": "Variance formula Var(K_ij) = mu_ij + alpha_i * mu_ij^2"
+  },
+  {
+    "id": "C0006",
+    "verbatim_sentence": "We first treat each gene separately and estimate gene-wise dispersion estimates (using maximum likelihood), which rely only on the data of each individual gene (black dots in Figure 1).",
+    "section_or_figure": "Empirical Bayes shrinkage for dispersion estimation",
+    "claim_type": "algorithm",
+    "what_to_look_for": "Step 1: Gene-wise maximum likelihood estimation (MLE) of dispersion for each gene individually"
+  },
+  {
+    "id": "C0007",
+    "verbatim_sentence": "Next, we determine the location parameter of the distribution of these estimates; to allow for dependence on average expression strength, we fit a smooth curve, as shown by the red line in Figure 1.",
+    "section_or_figure": "Empirical Bayes shrinkage for dispersion estimation",
+    "claim_type": "algorithm",
+    "what_to_look_for": "Step 2: Fitting a smooth curve to dispersion MLEs as a function of mean expression strength"
+  },
+  {
+    "id": "C0008",
+    "verbatim_sentence": "We then shrink the gene-wise dispersion estimates toward the values predicted by the curve to obtain final dispersion values (blue arrow heads).",
+    "section_or_figure": "Empirical Bayes shrinkage for dispersion estimation",
+    "claim_type": "algorithm",
+    "what_to_look_for": "Step 3: Empirical Bayes shrinkage of gene-wise dispersion estimates toward the fitted curve to obtain MAP estimates"
+  },
+  {
+    "id": "C0009",
+    "verbatim_sentence": "The black points circled in blue are detected as dispersion outliers and not shrunk toward the prior (shrinkage would follow the dotted line).",
+    "section_or_figure": "Figure 1",
+    "claim_type": "filtering",
+    "what_to_look_for": "Detection of dispersion outliers and exclusion from shrinkage toward the prior trend"
+  }
+]

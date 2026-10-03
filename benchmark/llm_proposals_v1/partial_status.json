@@ -1,0 +1,265 @@
+{
+  "pause_request_time": "2026-10-03T16:51:18+05:30",
+  "interrupt_time": "2026-10-03T16:52:01+05:30",
+  "saved_at_utc": "2026-10-03T11:24:42.902321+00:00",
+  "model": "gemini-3.8-flash",
+  "resolved_version": "gemini-3.8-flash",
+  "run1": {
+    "successful_chunks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "chunk_results": [
+      {
+        "chunk_index": 1,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          503,
+          503,
+          503,
+          503
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (503): "
+      },
+      {
+        "chunk_index": 2,
+        "state": "completed",
+        "attempt_statuses": [
+          200
+        ],
+        "attempt_count": 1,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 3,
+        "state": "completed",
+        "attempt_statuses": [
+          503,
+          503,
+          200
+        ],
+        "attempt_count": 3,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 4,
+        "state": "completed",
+        "attempt_statuses": [
+          503,
+          200
+        ],
+        "attempt_count": 2,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 5,
+        "state": "completed",
+        "attempt_statuses": [
+          503,
+          200
+        ],
+        "attempt_count": 2,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 6,
+        "state": "completed",
+        "attempt_statuses": [
+          503,
+          200
+        ],
+        "attempt_count": 2,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 7,
+        "state": "completed",
+        "attempt_statuses": [
+          503,
+          200
+        ],
+        "attempt_count": 2,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 8,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 9,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      }
+    ],
+    "proposals_saved": 63,
+    "malformed_responses": 0,
+    "transport_failures": 3,
+    "calls": 24,
+    "retry_events": 15,
+    "proposal_file": "run1/proposals_unmodified.json"
+  },
+  "run2": {
+    "successful_chunks": [],
+    "chunk_results": [
+      {
+        "chunk_index": 1,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 2,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 3,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 4,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 5,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 6,
+        "state": "gave_up_after_retries",
+        "attempt_statuses": [
+          429,
+          429,
+          429,
+          429
+        ],
+        "attempt_count": 4,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 7,
+        "state": "interrupted_before_retry_completion",
+        "attempt_statuses": [
+          429,
+          429
+        ],
+        "attempt_count": 2,
+        "last_attempt_error": "LLM request failed (429): "
+      },
+      {
+        "chunk_index": 8,
+        "state": "not_started",
+        "attempt_statuses": [],
+        "attempt_count": 0,
+        "last_attempt_error": null
+      },
+      {
+        "chunk_index": 9,
+        "state": "not_started",
+        "attempt_statuses": [],
+        "attempt_count": 0,
+        "last_attempt_error": null
+      }
+    ],
+    "proposals_saved": 0,
+    "calls": 26,
+    "retry_events": 20,
+    "proposal_file": "run2/proposals_unmodified_partial.json",
+    "partial_manifest": "run2/partial_manifest.json"
+  },
+  "retry_log_total_events": 35,
+  "combined_retry_log": "retry_log_so_far.jsonl",
+  "secret_redacted_files": [],
+  "no_api_calls_after_interrupt": true,
+  "scope": "PARTIAL",
+  "settings": {
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+    "temperature": 0,
+    "authentication": "Bearer key sourced from GEMINI_API_KEY; value omitted",
+    "run1_completed_chunks": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "run1_missing_chunks": [
+      1,
+      8,
+      9
+    ],
+    "run2": "incomplete; no successful chunks"
+  },
+  "partial_validation": {
+    "proposals_checked": 63,
+    "accepted": 0,
+    "rejected": 63,
+    "rejections_by_first_failing_stage": {
+      "sentence": 39,
+      "commit": 0,
+      "location": 24
+    },
+    "short_sentence_flags_on_accepted_lt_5_whitespace_tokens": 0,
+    "reference_like_flags_on_accepted": 0,
+    "input_proposals_unchanged": true
+  },
+  "final_rejection_rate_or_ci": "not computed (partial run only)"
+}

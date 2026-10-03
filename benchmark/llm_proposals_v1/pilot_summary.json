@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-03T10:45:41.031802+00:00",
+  "model_requested": "gemini-3.8-flash",
+  "response_model": "gemini-3.8-flash",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "temperature": 0,
+  "chunk_index": 1,
+  "chunk_count_total": 9,
+  "chunk_chars": 11688,
+  "http_status": 200,
+  "parsed_as_pipeline_expects": true,
+  "proposal_count": 9,
+  "malformed_responses": 0,
+  "accepted_sentence_count": 5,
+  "rejected_sentence_count": 4,
+  "pipeline_exception": null,
+  "raw_response_file": "benchmark/llm_proposals_v1/pilot_raw_response_001.json",
+  "proposals_file": "benchmark/llm_proposals_v1/pilot_proposals_unmodified.json"
+}

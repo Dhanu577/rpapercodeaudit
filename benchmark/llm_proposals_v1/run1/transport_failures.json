@@ -1,0 +1,20 @@
+[
+  {
+    "chunk_index": 1,
+    "error": "LLM request failed (503): ",
+    "http_status": 503,
+    "raw_response_file": "run1/raw_responses/chunk01_attempt04.txt"
+  },
+  {
+    "chunk_index": 8,
+    "error": "LLM request failed (429): ",
+    "http_status": 429,
+    "raw_response_file": "run1/raw_responses/chunk08_attempt04.txt"
+  },
+  {
+    "chunk_index": 9,
+    "error": "LLM request failed (429): ",
+    "http_status": 429,
+    "raw_response_file": "run1/raw_responses/chunk09_attempt04.txt"
+  }
+]
