@@ -1,0 +1,318 @@
+{
+  "method": "For each sentence-stage failure, enumerate all contiguous nonblank paper line spans whose whitespace-collapsed character length is 48%-145% of the query, up to 22 lines. Score each query/passage pair by Python difflib.SequenceMatcher.ratio() on case-folded character strings with autojunk=False. Highest score wins; ties choose closer character length, then earlier lines. Scores are 0-1. No text normalization beyond collapsing whitespace and case-folding is applied before scoring.",
+  "candidate_count_rule": "contiguous source line spans; blank lines stop a span",
+  "rows": [
+    {
+      "proposal_index": 2,
+      "proposal_id": "C0002",
+      "model_text": "We again employ an empirical Bayes procedure: we first perform ordinary GLM fits to obtain maximum-likelihood estimates (MLEs) for the LFCs and then fit a zero-centered normal distribution to the observed distribution of MLEs over all genes.",
+      "score": 0.80198,
+      "paper_lines": "266-268",
+      "nearest_passage": "ordinary GLM fits to obtain maximum-likelihood esti mates (MLEs) for the LFCs and then fit a zero-centered normal distribution to the observed distribution of MLEs"
+    },
+    {
+      "proposal_index": 4,
+      "proposal_id": "C0004",
+      "model_text": "Furthermore, a standard error for each estimate is reported, which is derived from the posterior’s curvature at its maximum (see Methods for details).",
+      "score": 0.841699,
+      "paper_lines": "272-273",
+      "nearest_passage": "dard error for each estimate is reported, which is derived from the posterior’s curvature at its maximum (see"
+    },
+    {
+      "proposal_index": 6,
+      "proposal_id": "C0006",
+      "model_text": "The Wald test P values from the subset of genes that pass an independent filtering step, described in the next section, are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+      "score": 0.937824,
+      "paper_lines": "357-360",
+      "nearest_passage": "Pvaluesfromthesubsetofgenesthatpassanindependent filtering step, described in the next section, are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21]."
+    },
+    {
+      "proposal_index": 7,
+      "proposal_id": "C0007",
+      "model_text": "DESeq2 uses the average expression strength of each gene, across all samples, as its filter criterion, and it omits all genes with mean normalized counts below a filtering threshold from multiple testing adjustment.",
+      "score": 0.883117,
+      "paper_lines": "381-383",
+      "nearest_passage": "age expression strength of each gene, across all samples, as its filter criterion, and it omits all genes with mean normalized counts below a filtering threshold from mul"
+    },
+    {
+      "proposal_index": 10,
+      "proposal_id": "C0002",
+      "model_text": "Note the lack of LFC shrinkage: to find genes with weak differential expression, DESeq2 requires that the LFC shrinkage has been disabled.",
+      "score": 0.883534,
+      "paper_lines": "459-460",
+      "nearest_passage": "lack of LFC shrinkage: to find genes with weak differen tial expression, DESeq2 requires that the LFC shrinkage"
+    },
+    {
+      "proposal_index": 11,
+      "proposal_id": "C0003",
+      "model_text": "DESeq2 flags, for each gene, those samples that have a Cook’s distance greater than the 0.99 quantile of the F(p, m −p) distribution, where p is the number of model parameters including the intercept, and m is the number of samples.",
+      "score": 0.966592,
+      "paper_lines": "487-490",
+      "nearest_passage": "DESeq2 flags, for each gene, those samples that have a Cook’s distance greater than the 0.99 quantile of the F(p, m −p) distribution, where p is the number of model parameters including the intercept, and m is the num"
+    },
+    {
+      "proposal_index": 15,
+      "proposal_id": "C0007",
+      "model_text": "The rlog transformation is calculated by fitting for each gene a GLM with a baseline expression (i.e., intercept only) and, computing for each sample, shrunken LFCs with respect to the baseline, using the same empirical Bayes procedure as before (Methods).",
+      "score": 0.978967,
+      "paper_lines": "563-567",
+      "nearest_passage": "The rlog transformation is calculated by fitting for each gene a GLM with a baseline expression (i.e., intercept only) and, computing for each sample, shrunken LFCs with respect to the baseline, using the same empiri cal Bayes procedure as before (Methods). Here, how"
+    },
+    {
+      "proposal_index": 16,
+      "proposal_id": "C0008",
+      "model_text": "Both the rlog transformation and theVST are provided in theDESeq2 package.",
+      "score": 0.852713,
+      "paper_lines": "586-587",
+      "nearest_passage": "formation and theVST are provided in theDESeq2 package."
+    },
+    {
+      "proposal_index": 17,
+      "proposal_id": "C0001",
+      "model_text": "For all algorithms returning P values, the P values from genes with non-zero sum of read counts across samples were adjusted using the Benjamini–Hochberg procedure [21].",
+      "score": 0.968481,
+      "paper_lines": "651-654",
+      "nearest_passage": "Table S3. For all algorithms returning P values, the P val ues from genes with non-zero sum of read counts across samples were adjusted using the Benjamini–Hochberg procedure [21]."
+    },
+    {
+      "proposal_index": 19,
+      "proposal_id": "C0003",
+      "model_text": "To simulate data with realistic moments, the mean and dispersions were drawn from the joint distribution of means and gene-wise dispersion estimates from the Pickrell et al. data, fitting only an intercept term.",
+      "score": 0.997636,
+      "paper_lines": "658-661",
+      "nearest_passage": "To simulate data with realistic moments, the mean and dispersions were drawn from the joint distribu tion of means and gene-wise dispersion estimates from the Pickrell et al. data, fitting only an intercept term."
+    },
+    {
+      "proposal_index": 22,
+      "proposal_id": "C0006",
+      "model_text": "The sensitivity was calculated as the fraction of genes with adjusted P value < 0.1 among the genes with true differences between group means.",
+      "score": 0.915254,
+      "paper_lines": "677-679",
+      "nearest_passage": "sitivity was calculated as the fraction of genes with adjusted P value < 0.1 among the genes with true differences between group means. The precision was"
+    },
+    {
+      "proposal_index": 23,
+      "proposal_id": "C0007",
+      "model_text": "The precision was calculated as the fraction of genes with true differences between group means among those with adjusted P value < 0.1.",
+      "score": 0.858333,
+      "paper_lines": "680-681",
+      "nearest_passage": "calculated as the fraction of genes with true differ ences between group means among those with adjusted"
+    },
+    {
+      "proposal_index": 24,
+      "proposal_id": "C0008",
+      "model_text": "We note that EBSeq version 1.4.0 by default removes low-count genes– whose 75% quantile of normalized counts is less than ten– before calling differential expression.",
+      "score": 0.917933,
+      "paper_lines": "697-699",
+      "nearest_passage": "valueof0.1.WenotethatEBSeq version 1.4.0 by default removes low-count genes– whose 75% quantile of nor malized counts is less than ten– before calling differential"
+    },
+    {
+      "proposal_index": 25,
+      "proposal_id": "C0009",
+      "model_text": "We chose a set of 26 RNA-seq samples of the same read length (46 base pairs) from male individuals.",
+      "score": 0.862745,
+      "paper_lines": "804-805",
+      "nearest_passage": "chosea set of 26RNA-seqsamplesofthesamereadlength (46 base pairs) from male individuals. We randomly drew"
+    },
+    {
+      "proposal_index": 27,
+      "proposal_id": "C0011",
+      "model_text": "We estimated the false positive rate associated with a critical value of 0.01 by dividing the number of P values less than 0.01 by the total number of tests; genes with zero sum of read counts across samples were excluded.",
+      "score": 0.986607,
+      "paper_lines": "808-811",
+      "nearest_passage": "Weestimated the false positive rate associated with a crit ical value of 0.01 by dividing the number of P values less than 0.01 by the total number of tests; genes with zero sum of read counts across samples were excluded. The"
+    },
+    {
+      "proposal_index": 28,
+      "proposal_id": "C0001",
+      "model_text": "For notational simplicity, the equations here use the natural logarithm as the link function, though the DESeq2 software reports estimated model coefficients and their estimated standard errors on the log2 scale.",
+      "score": 0.997647,
+      "paper_lines": "1001-1004",
+      "nearest_passage": "For notational simplicity, the equations here use the nat ural logarithm as the link function, though the DESeq2 software reports estimated model coefficients and their estimated standard errors on the log2 scale."
+    },
+    {
+      "proposal_index": 29,
+      "proposal_id": "C0002",
+      "model_text": "By default, the normalization constants sij are considered constant within a sample, sij = sj,andareestimated with the median-of-ratios method previously described and used in DESeq [4] and DEXSeq [30]:",
+      "score": 0.997531,
+      "paper_lines": "1005-1008",
+      "nearest_passage": "By default, the normalization constants sij are consid ered constant within a sample, sij = sj,andareestimated with the median-of-ratios method previously described and used in DESeq [4] and DEXSeq [30]:"
+    },
+    {
+      "proposal_index": 30,
+      "proposal_id": "C0003",
+      "model_text": "To recover the desirable symmetry between all levels, DESeq2 uses expanded design matrices, which include an indicator variable for each level of each factor, in addition to an intercept column (i.e., none of the levels is absorbed into the intercept).",
+      "score": 0.947368,
+      "paper_lines": "978-982",
+      "nearest_passage": "To recover the desirable symmetry between all levels, DESeq2 uses expanded design matrices, which include an indicator variable for each level of each factor, in addi tion to an intercept column (i.e., none of the levels is absorbed into the intercept). While such a design matrix"
+    },
+    {
+      "proposal_index": 31,
+      "proposal_id": "C0004",
+      "model_text": "For dispersion estimation and for estimating the width of the LFC prior, standard design matrices are used.",
+      "score": 0.926407,
+      "paper_lines": "985-987",
+      "nearest_passage": "regularization. For dispersion estimation and for estimat ing the width of the LFC prior, standard design matrices are used."
+    },
+    {
+      "proposal_index": 32,
+      "proposal_id": "C0005",
+      "model_text": "We assume the dispersion parameter αi follows a lognormal prior distribution that is centered around a trend that depends on the gene's mean normalized read count: log αi ∼ N logαtr(¯μi), σ2 d .",
+      "score": 0.987212,
+      "paper_lines": "1015-1019",
+      "nearest_passage": "We assume the dispersion parameter αi follows a log normal prior distribution that is centered around a trend that depends on the gene’s mean normalized read count: log αi ∼ N logαtr(¯μi), σ2 d . ("
+    },
+    {
+      "proposal_index": 33,
+      "proposal_id": "C0006",
+      "model_text": "For the trend function, we use the same parametrization as we used for DEXSeq [30], namely, αtr( ¯μ) = a1 ¯ μ +α0.",
+      "score": 0.908367,
+      "paper_lines": "1063-1068",
+      "nearest_passage": "around the trend. For the trend function, we use the same parametrization as we used for DEXSeq [30], namely, αtr( ¯μ) = a1 ¯ 6) μ +α0. ("
+    },
+    {
+      "proposal_index": 34,
+      "proposal_id": "C0007",
+      "model_text": "To get a gene-wise dispersion estimate for a gene i, we start by fitting a negative binomial GLM without an LFC prior for the design matrix X to the gene's count data.",
+      "score": 0.859701,
+      "paper_lines": "1084-1086",
+      "nearest_passage": "persion estimate for a gene i, we start by fitting a nega tive binomial GLM without an LFC prior for the design matrix X to the gene’s count data. This GLM uses a rough"
+    },
+    {
+      "proposal_index": 39,
+      "proposal_id": "C0003",
+      "model_text": "Therefore, the prior variance σ2 d is obtained by subtracting the expected sampling variance from an estimate of the variance of the logarithmic residuals, s2 lr :\nσ2 d = max s2 lr −ψ1((m−p)/2), 0.25 .",
+      "score": 0.997519,
+      "paper_lines": "1236-1243",
+      "nearest_passage": "Therefore, the prior variance σ2 d is obtained by subtract ing the expected sampling variance from an estimate of the variance of the logarithmic residuals, s2 lr : σ2 d = max s2 lr −ψ1((m−p)/2), 0.25 ."
+    },
+    {
+      "proposal_index": 40,
+      "proposal_id": "C0004",
+      "model_text": "To avoid inflation of σ2 d due to dispersion outliers (i.e., genes not well captured by this prior; see below), we use a robust estimator for the standard deviation slr of the logarithmic residuals,\nslr = mad\nlog αgw\n−logαtr( ¯μi) ,\nwhere mad stands for the median absolute deviation, divided as usual by the scaling factor −1(3/4).",
+      "score": 0.799342,
+      "paper_lines": "1249-1256",
+      "nearest_passage": "To avoid inflation of σ2 d due to dispersion outliers (i.e., genes not well captured by this prior; see below), we use a robust estimator for the standard deviation slr of the logarithmic residuals, slr = mad log αgw logarithmic residuals to a density of simulated logarithmic"
+    },
+    {
+      "proposal_index": 41,
+      "proposal_id": "C0005",
+      "model_text": "When there are three or less residual degrees of freedom (number of samples minus number of parameters to estimate), the estimation of the prior variance σ2 d using the observed variance of logarithmic residuals s2 lr tends to underestimate σ2 d. In this case, we instead estimate the prior variance through simulation.",
+      "score": 0.943338,
+      "paper_lines": "1322-1330",
+      "nearest_passage": "are three or less residual degrees of freedom (number of samples minus number of parameters to estimate), the estimation of the prior variance σ2 d using the observed variance of logarithmic residuals s2 lr tends to underes timate σ2 d. In this case, we instead estimate the prior variance through simulation. Wematchthedistributionof"
+    },
+    {
+      "proposal_index": 42,
+      "proposal_id": "C0006",
+      "model_text": "We repeat the simulation over a grid of values for σ2 d, and select the value that minimizes the Kullback–Leibler divergence from the observed density of logarithmic residuals to the simulated density.",
+      "score": 0.931217,
+      "paper_lines": "1263-1266",
+      "nearest_passage": "over a grid of values for σ2 d, and select the value that mini mizes the Kullback–Leibler divergence from the observed density of logarithmic residuals to the simulated density."
+    },
+    {
+      "proposal_index": 43,
+      "proposal_id": "C0007",
+      "model_text": "Therefore, we use the heuristic of considering a gene as a dispersion outlier, if the residual from the trend fit is more than two standard deviations of logarithmic residuals, slr (see Equation (8)), above the fit, i.e., if\nlog αgw i >logαtr(¯μi) + 2slr.",
+      "score": 0.942699,
+      "paper_lines": "1294-1301",
+      "nearest_passage": "might lead to false positives.Therefore, we use the heuris tic of considering a gene as a dispersion outlier, if the residual from the trend fit is more than two standard deviations of logarithmic residuals, slr (see Equation (8)), above the fit, i.e., if log αgw i >logαtr(¯μi) + 2slr."
+    },
+    {
+      "proposal_index": 44,
+      "proposal_id": "C0008",
+      "model_text": "Instead of the MAP value , we use the gene-wise estimate αgw i as a final dispersion value in the subsequent steps.",
+      "score": 0.625592,
+      "paper_lines": "1309-1313",
+      "nearest_passage": "towardthe trended prior mean. Instead of the MAP value , we use the gene-wise estimate αgw i i i"
+    },
+    {
+      "proposal_index": 49,
+      "proposal_id": "C0001",
+      "model_text": "The Wald test compares the beta estimate βir divided by its estimated standard error SE(βir) to a standard normal distribution.",
+      "score": 0.860987,
+      "paper_lines": "1448-1449",
+      "nearest_passage": "TheWaldtestcomparesthebetaestimateβirdividedby itsestimatedstandarderrorSE(βir)toastandardnormal"
+    },
+    {
+      "proposal_index": 51,
+      "proposal_id": "C0003",
+      "model_text": "The Wald test P values from the subset of genes that pass the independent filtering step are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21].",
+      "score": 0.955224,
+      "paper_lines": "1462-1464",
+      "nearest_passage": "P values from the subset of genes that pass the indepen dent filtering step are adjusted for multiple testing using the procedure of Benjamini and Hochberg [21]."
+    },
+    {
+      "proposal_index": 52,
+      "proposal_id": "C0004",
+      "model_text": "The filter statistic in DESeq2 is the mean of normalized counts for a gene, while the test statistic is p, the P value from the Wald test.",
+      "score": 0.857143,
+      "paper_lines": "1470-1472",
+      "nearest_passage": "the case in our application. The filter statistic in DESeq2 is the meanof normalized counts for a gene, while the test statistic is p,theP value from the Wald test. We first con"
+    },
+    {
+      "proposal_index": 53,
+      "proposal_id": "C0005",
+      "model_text": "Two-tailed P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from |βir| toward ∞. The value of the integral is then multiplied by 2 and thresholded at 1.",
+      "score": 0.949074,
+      "paper_lines": "1518-1521",
+      "nearest_passage": "and H0b : βir =−θ.Two-tailedP values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from |βir| toward ∞.Thevalue of the integral is then multiplied by 2 and thresholdedat 1."
+    },
+    {
+      "proposal_index": 54,
+      "proposal_id": "C0006",
+      "model_text": "Conversely, when searching for genes whose absolute LFC is significantly below a threshold, i.e., when testing the null hypothesis H0 : |βir| ≥ θ, the P value is constructed as the maximum of two one-sided tests of the simple null hypotheses: H0a : βir = θ and H0b : βir = −θ.",
+      "score": 0.992727,
+      "paper_lines": "1525-1529",
+      "nearest_passage": "Conversely, when searching for genes whose absolute LFC is significantly below a threshold, i.e., when testing the null hypothesis H0 : |βir| ≥θ, theP value is con structed as the maximum of two one-sided tests of the simple null hypotheses: H0a : βir = θ and H0b : βir =−θ."
+    },
+    {
+      "proposal_index": 55,
+      "proposal_id": "C0007",
+      "model_text": "The one-sided P values are generated by integrating a normal distribution centered on θ with standard deviation SE(βir) from βir toward −∞, and integrating a normal distribution centered on −θ with standard deviation SE(βir) from βir toward ∞.",
+      "score": 0.970588,
+      "paper_lines": "1530-1534",
+      "nearest_passage": "Theone-sidedP valuesaregenerated byintegrating a nor mal distribution centered on θ with standard deviation SE(βir) fromβir toward−∞,andintegratinganormaldis tribution centered on −θ with standard deviation SE(βir) from βir toward ∞."
+    },
+    {
+      "proposal_index": 58,
+      "proposal_id": "C0010",
+      "model_text": "Second, when interaction terms are included and all factors have two levels, then standard design matrices are used rather than expanded model matrices, such that only a single term is used to test the null hypothesis that a combination of two effects is merely additive in the logarithmic scale.",
+      "score": 0.989796,
+      "paper_lines": "1552-1557",
+      "nearest_passage": "ond, when interaction terms are included and all factors have two levels, then standard design matrices are used rather than expanded model matrices, such that only a single term is used to test the null hypothesisthata combi nation of two effects is merely additive in the logarithmic scale."
+    },
+    {
+      "proposal_index": 59,
+      "proposal_id": "C0011",
+      "model_text": "For unsupervised analyses, for instance sample quality assessment, it is desirable that the experimental design has no influence on the transformation, and hence DESeq2 by default ignores the design matrix and re-estimates the dispersions treating all samples as replicates, i.e., it uses blind dispersion estimation.",
+      "score": 0.952224,
+      "paper_lines": "1571-1575",
+      "nearest_passage": "vised analyses, for instance sample quality assessment, it is desirable that the experimental design has no influ ence on the transformation, and hence DESeq2 by default ignores the design matrix and re-estimatesthe dispersions treating all samples as replicates, i.e., it uses blind disper"
+    },
+    {
+      "proposal_index": 60,
+      "proposal_id": "C0012",
+      "model_text": "The prior variance is found by matching the 97.5% quantile of a zero-centered normal distribution to the 95% quantile of the absolute values in the LFC matrix.",
+      "score": 0.937685,
+      "paper_lines": "1595-1598",
+      "nearest_passage": "only an intercept. The prior variance is found bymatching the 97.5% quantile of a zero-centered normal distribu tion to the 95% quantile of the absolute values in the LFC matrix."
+    },
+    {
+      "proposal_index": 62,
+      "proposal_id": "C0014",
+      "model_text": "The count matrix and metadata, including the gene model and sample information, are stored in an S4 class derived from the SummarizedExperiment class of the GenomicRanges package [60].",
+      "score": 0.926952,
+      "paper_lines": "1638-1641",
+      "nearest_passage": "Bioconductor project [11]. The count matrix and meta data, including the gene model and sample information, are stored in an S4 class derived from the Summarized Experiment class of the GenomicRanges package [60]."
+    },
+    {
+      "proposal_index": 63,
+      "proposal_id": "C0015",
+      "model_text": "A single function, called DESeq, is used to run the default analysis, while lower-level functions are also available for advanced users.",
+      "score": 0.956835,
+      "paper_lines": "1655-1657",
+      "nearest_passage": "ization. A single function, called DESeq, isusedtorun the default analysis, while lower-level functions are also available for advanced users."
+    }
+  ]
+}
