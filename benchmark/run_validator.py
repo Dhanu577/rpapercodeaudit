@@ -5,10 +5,7 @@ import csv
 import hashlib
 import json
 import os
-import re
-import subprocess
 import sys
-from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -16,38 +13,77 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from rpapercodeaudit.claim_extraction import extract_claims, normalize_whitespace
+from rpapercodeaudit.claim_extraction import extract_claims, validate_claims
+from rpapercodeaudit.code_location import prepare_repository, validate_location
 
 PINNED_COMMIT = "76c5f8523716804dbe0a9500b4b7e216c6af225c"
 
 
-def git(repo: Path, *args: str) -> tuple[bool, str]:
-    p = subprocess.run(["git", "-C", str(repo), *args], text=True, capture_output=True)
-    return p.returncode == 0, p.stdout.strip() if p.returncode == 0 else p.stderr.strip()
-
-
-def blob(repo: Path, commit: str, file: str) -> str | None:
-    ok, _ = git(repo, "cat-file", "-e", f"{commit}:{file}")
-    if not ok:
+def classify_location_error(error: str | None) -> str | None:
+    """Summarize the real location validator's error without repeating its checks."""
+    if error is None:
         return None
-    ok, output = git(repo, "show", f"{commit}:{file}")
-    return output if ok else None
+    message = error.casefold()
+    if "outside the repository" in message or "no such file or directory" in message or "not a directory" in message:
+        return "file"
+    if "line range" in message or "outside file with" in message:
+        return "line_range"
+    if "code_excerpt" in message:
+        return "excerpt"
+    if "invalid location" in message:
+        return "invalid_location"
+    return "location"
 
 
 def evaluate(case: dict[str, Any], paper: str, repo: Path) -> dict[str, Any]:
-    sentence_match = normalize_whitespace(case["paper_sentence"]) in normalize_whitespace(paper)
-    commit_resolves, commit_value = git(repo, "rev-parse", "--verify", f"{case['commit']}^{{commit}}")
-    repo_commit_valid = commit_resolves and commit_value == PINNED_COMMIT
-    content = blob(repo, case["commit"], case["file"]) if commit_resolves else None
-    file_exists = content is not None
-    lines = content.splitlines(keepends=True) if content is not None else []
-    start, end = int(case["line_start"]), int(case["line_end"])
-    line_range_valid = file_exists and start >= 1 and end >= start and end <= len(lines)
-    actual = "".join(lines[start - 1:end]) if line_range_valid else ""
-    excerpt_matches = line_range_valid and normalize_whitespace(actual) == normalize_whitespace(case["excerpt"])
-    stages = {"sentence_match": sentence_match, "repo_commit_valid": repo_commit_valid, "file_exists": file_exists, "line_range_valid": line_range_valid, "excerpt_matches": excerpt_matches}
+    claim = {
+        "id": case.get("case_id", ""),
+        "verbatim_sentence": case["paper_sentence"],
+        "section_or_figure": "",
+        "claim_type": "other",
+        "what_to_look_for": "",
+    }
+    sentence_result = validate_claims(paper, [claim])
+    sentence_match = bool(sentence_result.accepted)
+
+    repo_error: str | None = None
+    try:
+        _, resolved_commit = prepare_repository(repo, case["commit"])
+        repo_commit_valid = resolved_commit == PINNED_COMMIT
+        if not repo_commit_valid:
+            repo_error = f"resolved commit {resolved_commit} does not match pinned commit {PINNED_COMMIT}"
+    except (OSError, RuntimeError, ValueError) as exc:
+        repo_commit_valid = False
+        repo_error = str(exc)
+
+    location_item = {
+        "claim_id": case.get("case_id", ""),
+        "package": case.get("repo", ""),
+        "commit_hash": case["commit"],
+        "code_file": case["file"],
+        "start_line": case["line_start"],
+        "end_line": case["line_end"],
+        "code_excerpt": case["excerpt"],
+    }
+    location, location_error = validate_location(repo, location_item)
+    location_valid = location is not None
+
+    stages = {
+        "sentence_match": sentence_match,
+        "repo_commit_valid": repo_commit_valid,
+        "location": location_valid,
+    }
     first_failure = next((name for name, passed in stages.items() if not passed), None)
-    return {**case, "stage_results": stages, "final_decision": all(stages.values()), "first_failing_stage": first_failure, "mode": "mechanical"}
+    return {
+        **case,
+        "stage_results": stages,
+        "final_decision": all(stages.values()),
+        "first_failing_stage": first_failure,
+        "repo_error": repo_error,
+        "location_error": location_error,
+        "location_cause": classify_location_error(location_error),
+        "mode": "mechanical",
+    }
 
 
 def verify_checksum(cases_path: Path) -> None:

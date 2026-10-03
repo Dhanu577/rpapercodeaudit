@@ -14,9 +14,9 @@ This benchmark evaluates the mechanical citation-integrity boundary of RPaperCod
 
 The case file and checksum were generated and written **before** the seeded validator runs. The validator did not modify the frozen cases.
 
-## Mechanical ground truth
+## Validator stages
 
-A record is mechanically valid only when the paper sentence occurs after whitespace normalization, the requested commit resolves to the pinned commit, the file exists at that commit, the line range is valid, and the stored excerpt equals the actual lines at that commit after whitespace normalization. The runner evaluates every stage independently and records the first failing stage.
+`run_validator.py` delegates its checks to the project validators: `validate_claims()` checks the paper sentence, `prepare_repository()` resolves and checks out the requested commit, and `validate_location()` verifies the file, line range, and exact excerpt as one `location` stage. The benchmark's repository/commit stage passes only when the resolved commit is the pinned commit. The wrapper records the real location validator's error and, where its message permits, a cause category; it does not recreate the validators' checks. Results record the first failing stage in sentence, repository/commit, location order.
 
 Tier A contains one valid case and mechanically invalid mutations: altered sentence, nonexistent sentence, wrong commit, wrong file/excerpt pairing, and invalid line ranges. Tier B contains authentic but semantically irrelevant, misleading, contradictory, or compound evidence. Tier B is expected to be mechanically accepted and is reported as the intended scope boundary, not as a validator failure.
 

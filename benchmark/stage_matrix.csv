@@ -1,7 +1,7 @@
-mutation_type,n,sentence_match_any_stage_catch,sentence_match_first_stage_catch,repo_commit_valid_any_stage_catch,repo_commit_valid_first_stage_catch,file_exists_any_stage_catch,file_exists_first_stage_catch,line_range_valid_any_stage_catch,line_range_valid_first_stage_catch,excerpt_matches_any_stage_catch,excerpt_matches_first_stage_catch
-A0_valid,24,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-A1_altered_sentence,72,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-A2_nonexistent_sentence,72,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-A3_wrong_commit,15,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0
-A4_wrong_file,23,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0
-A5_invalid_line_range,120,0.0,0.0,0.0,0.0,0.2,0.2,0.6,0.4,1.0,0.4
+mutation_type,n,sentence_match_any_stage_catch,sentence_match_first_stage_catch,repo_commit_valid_any_stage_catch,repo_commit_valid_first_stage_catch,location_any_stage_catch,location_first_stage_catch
+A0_valid,24,0.0,0.0,0.0,0.0,0.0,0.0
+A1_altered_sentence,72,1.0,1.0,0.0,0.0,0.0,0.0
+A2_nonexistent_sentence,72,1.0,1.0,0.0,0.0,0.0,0.0
+A3_wrong_commit,15,0.0,0.0,1.0,1.0,1.0,0.0
+A4_wrong_file,23,0.0,0.0,0.0,0.0,1.0,1.0
+A5_invalid_line_range,120,0.0,0.0,0.0,0.0,1.0,1.0

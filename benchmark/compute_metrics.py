@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-STAGES = ["sentence_match", "repo_commit_valid", "file_exists", "line_range_valid", "excerpt_matches"]
+STAGES = ["sentence_match", "repo_commit_valid", "location"]
 
 
 def wilson(successes: int, total: int, z: float = 1.959963984540054) -> tuple[float, float]:
@@ -25,7 +25,7 @@ def read_results(path: Path) -> list[dict[str, Any]]:
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     if not rows: return
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
 
 
 def main() -> None:
