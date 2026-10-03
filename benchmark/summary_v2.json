@@ -1,0 +1,10 @@
+{
+  "boundary_cases": 220,
+  "cases": 520,
+  "classes": {
+    "boundary": 220,
+    "must_accept": 80,
+    "must_reject": 220
+  },
+  "unexpected_must_accept_or_must_reject": 0
+}

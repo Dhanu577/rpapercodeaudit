@@ -1,0 +1,5 @@
+expected_class,metric,successes,n,rate,ci_low,ci_high
+must_accept,acceptance_rate,80,80,1.0,0.9541818704644728,0.9999999999999999
+must_accept,rejection_rate,0,80,0.0,0.0,0.0458181295355271
+must_reject,acceptance_rate,0,220,0.0,0.0,0.01716151619513562
+must_reject,rejection_rate,220,220,1.0,0.9828384838048642,0.9999999999999999
