@@ -1,8 +1,8 @@
 # Impact of MIN_WORDS = 5 on saved deterministic proposals
 
-This is a static impact calculation over the saved `benchmark/natural_proposals_deterministic.json` output (319 proposals). It applies the spec rule exactly: collapse whitespace with the existing `\s+` normalizer, strip, then count whitespace-delimited tokens. It does not call a validator, run tests, alter proposal labels, or regenerate model output.
+This list was first calculated from the saved `benchmark/natural_proposals_deterministic.json` output (319 proposals) by collapsing whitespace with the existing `\s+` normalizer, stripping, and counting whitespace-delimited tokens. A post-freeze rerun through the real deterministic no-API pipeline confirmed the same accepted/rejected totals; no model output was regenerated.
 
-**Would be rejected under MIN_WORDS = 5: 193 of 319.** The rule must not be lowered to preserve these proposals. Per the task gate, this impact requires stopping the v3 validation and regression runs after the frozen commit and the post-freeze checks.
+**Rejected under MIN_WORDS = 5: 193 of 319. Accepted: 126.** The rule was not lowered. This satisfies the task's explicit stop condition, so the v3 case run and v1/v2 regression runs were not started.
 
 | Proposal ID | Normalized token count | Saved verbatim sentence |
 |---|---:|---|
@@ -199,3 +199,10 @@ This is a static impact calculation over the saved `benchmark/natural_proposals_
 | `H0317` | 4 | deletions and gene fusions. |
 | `H0318` | 3 | GenomeBiol 2013, 14:36. |
 | `H0319` | 1 | 66. |
+
+
+## Post-freeze checks and stop condition
+
+- The deterministic no-API natural-proposal rerun through the project's real extraction/claim-validation path reported **126 accepted and 193 rejected** from the 319 saved proposals. LLM-assisted proposals were skipped because no API key was configured; no model output was simulated.
+- The required 24-record original Tier-A pilot check accepted **23/24**. The one rejected valid pilot record is `row-6-A0` (`source_record_id: row-6`), whose sentence is `Theestimate of theLFCpriorwidthiscalculatedas follows.`; after whitespace normalization it has four tokens. Its sentence stage failed with `verbatim_sentence must contain at least 5 words after whitespace normalization (found 4)`; repository and location stages passed.
+- Because the required five-word rule rejects proposals (and also rejects one original pilot positive), execution stopped here. The frozen v3 cases and the v1/v2 full regression sets were **not run**. No case labels were changed.

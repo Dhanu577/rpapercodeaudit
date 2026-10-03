@@ -18,11 +18,12 @@ def test_v3_cases_have_predeclared_labels_and_ten_per_mutation_type():
     assert rows
     assert min(counts.values()) >= 10
     for row in rows:
-        expected = TYPE_CLASSES[row["mutation_type"]]
         if row["mutation_type"] == "S_unicode_composition":
             sentence = row["validator_inputs"]["items"][0]["verbatim_sentence"]
             import unicodedata
             expected = "must_accept" if unicodedata.normalize("NFC", sentence) == sentence else "must_reject"
+        else:
+            expected = TYPE_CLASSES[row["mutation_type"]]
         assert row["expected_class"] == expected, row["case_id"]
 
 
