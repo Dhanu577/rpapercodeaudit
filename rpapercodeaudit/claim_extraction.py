@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping
 
 PROMPT_VERSION = "claim-extraction-v2"
+MIN_WORDS = 5
 
 @dataclass(frozen=True, slots=True)
 class ExtractedClaim:
@@ -38,7 +39,8 @@ def validate_claims(paper_text: str, items: Iterable[Mapping[str, Any]]) -> Vali
     """Accept only exact sentence substrings after whitespace normalization.
 
     No fuzzy matching, case folding, punctuation normalization, stemming, or
-    edit-distance matching is performed.
+    edit-distance matching is performed. See benchmark/VALIDATOR_SPEC.md for
+    the minimum sentence length contract.
     """
     normalized_paper = normalize_whitespace(paper_text)
     accepted, rejected = [], []
@@ -47,7 +49,11 @@ def validate_claims(paper_text: str, items: Iterable[Mapping[str, Any]]) -> Vali
         try: claim = _claim_from_item(item, index)
         except ValueError as exc:
             rejected.append(RejectedClaim(item, f"invalid claim shape: {exc}")); continue
-        if normalize_whitespace(claim.verbatim_sentence) not in normalized_paper:
+        normalized_sentence = normalize_whitespace(claim.verbatim_sentence)
+        word_count = len(normalized_sentence.split())
+        if word_count < MIN_WORDS:
+            rejected.append(RejectedClaim(asdict(claim), f"verbatim_sentence must contain at least {MIN_WORDS} words after whitespace normalization (found {word_count})"))
+        elif normalized_sentence not in normalized_paper:
             rejected.append(RejectedClaim(asdict(claim), "verbatim_sentence is not an exact substring after whitespace normalization"))
         else: accepted.append(claim)
     return ValidationResult(accepted, rejected)
