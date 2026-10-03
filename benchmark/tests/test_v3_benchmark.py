@@ -26,6 +26,10 @@ def test_v3_cases_have_predeclared_labels_and_ten_per_mutation_type():
             expected = TYPE_CLASSES[row["mutation_type"]]
         assert row["expected_class"] == expected, row["case_id"]
 
+    assert {row["expected_class"] for row in rows if row["mutation_type"] == "S_empty_or_whitespace"} == {"must_reject"}
+    assert {row["expected_class"] for row in rows if row["mutation_type"] in {"S_one_word_substring", "S_four_word_sentence"}} == {"boundary"}
+    assert {row["expected_class"] for row in rows if row["mutation_type"] == "S_exactly_five_words"} == {"must_accept"}
+
 
 def test_v3_frozen_input_checksum_matches():
     expected = CHECKSUM.read_text(encoding="utf-8").split()[0]

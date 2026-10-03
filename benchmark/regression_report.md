@@ -1,5 +1,5 @@
-# Regression report — not run
+# Regression report: pending v3.1 freeze and reruns
 
-The requested v1 (422-case) and v2 (520-case) full regression comparisons against the new validator were **not run**. The required post-freeze natural-proposal check confirmed that `MIN_WORDS = 5` rejects 193 of the 319 saved deterministic proposals, which triggered the explicit STOP instruction before v3 benchmark execution and v1/v2 regression runs.
+The v1 (422-case) and v2 (520-case) comparisons against the v3.1 validator have not yet been run. They will be written to `results_v1_on_v3validator.jsonl` and `results_v2_on_v3validator.jsonl` after the annotated `benchmark-cases-v3.1-frozen` tag is pushed.
 
-Accordingly, this report contains no changed-case list and makes no claim that changes are limited to the specified gap types. The separate 24-record original pilot check is documented in `min_words_impact.md` and `REPORT_v3.md`.
+After rerun, this report will list every case whose v1 final decision or stage outcome changed and every v2 validator acceptance outcome that changed. Original labels and historical result files will remain untouched.

@@ -1,0 +1,14 @@
+{
+  "source": "/home/ubuntu/rpapercodeaudit/benchmark/natural_proposals_deterministic.json",
+  "proposal_count": 319,
+  "accepted": 319,
+  "rejected": 0,
+  "short_sentence_token_limit_exclusive": 5,
+  "short_sentence_count": 193,
+  "reference_like_count": 114,
+  "both_flags_count": 95,
+  "neither_flag_count": 107,
+  "flags_are_report_only": true,
+  "reference_like_heuristic": "numeric-only values/ranges, numbered reference prefixes, numeric bracket citations, author-year citations, DOI/URL/PMID/ISBN markers, and explicit reference/bibliography headings",
+  "csv": "/home/ubuntu/rpapercodeaudit/benchmark/natural_proposals_v3_1_flags.csv"
+}

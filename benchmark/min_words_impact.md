@@ -1,8 +1,8 @@
-# Impact of MIN_WORDS = 5 on saved deterministic proposals
+# Historical impact of the superseded MIN_WORDS = 5 rule
 
-This list was first calculated from the saved `benchmark/natural_proposals_deterministic.json` output (319 proposals) by collapsing whitespace with the existing `\s+` normalizer, stripping, and counting whitespace-delimited tokens. A post-freeze rerun through the real deterministic no-API pipeline confirmed the same accepted/rejected totals; no model output was regenerated.
+This records the result under the earlier v3 validator commit `8c5214d` only. The saved `benchmark/natural_proposals_deterministic.json` contains 319 proposals; the earlier five-word rule rejected 193 and accepted 126. Review found that word counts are unreliable for PDF-derived text and fragments. V3.1 removes the threshold: any non-empty exact substring may be accepted, regardless of token count. Shortness and reference-likeness are now report-only flags.
 
-**Rejected under MIN_WORDS = 5: 193 of 319. Accepted: 126.** The rule was not lowered. This satisfies the task's explicit stop condition, so the v3 case run and v1/v2 regression runs were not started.
+**Historical result under the superseded rule: 193 rejected, 126 accepted.** These labels do not describe the v3.1 validator behavior.
 
 | Proposal ID | Normalized token count | Saved verbatim sentence |
 |---|---:|---|
@@ -201,8 +201,8 @@ This list was first calculated from the saved `benchmark/natural_proposals_deter
 | `H0319` | 1 | 66. |
 
 
-## Post-freeze checks and stop condition
+## Historical post-freeze checks on the superseded rule
 
-- The deterministic no-API natural-proposal rerun through the project's real extraction/claim-validation path reported **126 accepted and 193 rejected** from the 319 saved proposals. LLM-assisted proposals were skipped because no API key was configured; no model output was simulated.
-- The required 24-record original Tier-A pilot check accepted **23/24**. The one rejected valid pilot record is `row-6-A0` (`source_record_id: row-6`), whose sentence is `Theestimate of theLFCpriorwidthiscalculatedas follows.`; after whitespace normalization it has four tokens. Its sentence stage failed with `verbatim_sentence must contain at least 5 words after whitespace normalization (found 4)`; repository and location stages passed.
-- Because the required five-word rule rejects proposals (and also rejects one original pilot positive), execution stopped here. The frozen v3 cases and the v1/v2 full regression sets were **not run**. No case labels were changed.
+- The deterministic no-API natural-proposal rerun through the project's real extraction/claim-validation path reported **126 accepted and 193 rejected** from the saved 319 under that validator version. LLM-assisted proposals were skipped because no API key was configured; no model output was simulated.
+- The original 24-record Tier-A pilot check under that version accepted **23/24**. `row-6-A0` (`source_record_id: row-6`) contained `Theestimate of theLFCpriorwidthiscalculatedas follows.` (four whitespace-delimited tokens) and failed only the sentence stage; repository and location stages passed.
+- These historical failures motivated the v3.1 rule revision. Current v3.1 pilot/proposal rechecks and benchmark results are documented in `REPORT_v3.md`; they are not inferred from this historical table.

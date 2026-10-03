@@ -1,11 +1,5 @@
-# v3 bugs and must-class failures — v3 cases not run
+# V3.1 bugs found — pending frozen run
 
-The frozen v3 case set was not executed because the explicit `MIN_WORDS = 5` natural-proposal impact gate fired first. Therefore no must-class v3 case failures were observed, and no v3 benchmark bug count can be reported.
+The v3.1 case set has not been executed. No v3.1 must-class failure is claimed at this point. After the annotated `benchmark-cases-v3.1-frozen` tag is pushed and the runner completes, this file will list every `must_accept` rejection and every `must_reject` acceptance with its case input and raw validator log. Boundary cases will remain excluded and reported separately.
 
-## Original pilot positive rejected by the new sentence rule
-
-| Case | Expected | Observed | Validator log | Hypothesis |
-|---|---|---|---|---|
-| `row-6-A0` (`source_record_id: row-6`) | Accept; original Tier-A valid record | Rejected at `sentence_match`; repository and location stages passed | `verbatim_sentence must contain at least 5 words after whitespace normalization (found 4)` | The extracted paper text is a four-token fragment (`Theestimate of theLFCpriorwidthiscalculatedas follows.`). This is a direct consequence of the specified five-word threshold, not a repository or location failure. |
-
-This pilot failure is also listed in `min_words_impact.md`; it is not mislabeled as a v3 benchmark observation.
+The earlier `row-6-A0` pilot rejection was caused by the superseded five-word rule. Under the revised exact-substring/empty-only rule, the 24-record pilot preflight accepted 24/24; see `preflight_v3_1.md`.

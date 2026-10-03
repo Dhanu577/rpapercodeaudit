@@ -1,6 +1,6 @@
 import unittest
 
-from rpapercodeaudit.claim_extraction import MIN_WORDS, normalize_whitespace, validate_claims
+from rpapercodeaudit.claim_extraction import normalize_whitespace, validate_claims
 
 
 class ClaimValidationTests(unittest.TestCase):
@@ -37,17 +37,16 @@ class ClaimValidationTests(unittest.TestCase):
         self.assertNotEqual(normalize_whitespace("Counts"), normalize_whitespace("counts"))
         self.assertNotEqual(normalize_whitespace("10 counts."), normalize_whitespace("10 counts"))
 
-    def test_claim_minimum_word_count_is_five(self):
-        self.assertEqual(MIN_WORDS, 5)
+    def test_empty_claims_reject_but_short_exact_substrings_are_accepted(self):
         result = validate_claims(self.PAPER, [
             self.claim(""),
             self.claim(" \t\n "),
-            self.claim("The method filters genes"),
-            self.claim("method filters genes below 10"),
+            self.claim("counts"),
+            self.claim("genes below 10 counts."),
         ])
-        self.assertEqual([claim.verbatim_sentence for claim in result.accepted], ["method filters genes below 10"])
-        self.assertEqual(len(result.rejected), 3)
-        self.assertTrue(all("at least 5 words" in item.reason for item in result.rejected))
+        self.assertEqual([claim.verbatim_sentence for claim in result.accepted], ["counts", "genes below 10 counts."])
+        self.assertEqual(len(result.rejected), 2)
+        self.assertTrue(all("non-empty" in item.reason for item in result.rejected))
 
 
 if __name__ == "__main__":
