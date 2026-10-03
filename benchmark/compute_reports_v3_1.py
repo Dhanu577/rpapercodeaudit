@@ -29,6 +29,10 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 def wilson(successes: int, total: int, z: float = 1.959963984540054) -> tuple[float | None, float | None]:
     if total == 0:
         return None, None
+    if successes == 0:
+        return 0.0, z * z / (total + z * z)
+    if successes == total:
+        return total / (total + z * z), 1.0
     p = successes / total
     denominator = 1 + z * z / total
     centre = (p + z * z / (2 * total)) / denominator
@@ -179,7 +183,8 @@ def build_v3_reports(results: list[dict[str, Any]], cases: list[dict[str, Any]],
 
     accepted_total = sum(bool(row["observed"]) for row in results)
     out.mkdir(parents=True, exist_ok=True)
-    summary = {"cases": len(results), "classes": dict(class_counts), "accepted": accepted_total, "must_class_failures": len(failures), "boundary_cases": class_counts["boundary"], "mutation_types": len(per_type), "types_n_lt_20": sum(row["flag_n_lt_20"] for row in per_type)}
+    mutation_type_counts = Counter(row["mutation_type"] for row in results)
+    summary = {"cases": len(results), "classes": dict(class_counts), "accepted": accepted_total, "must_class_failures": len(failures), "boundary_cases": class_counts["boundary"], "mutation_types": len(mutation_type_counts), "types_n_lt_20": sum(count < 20 for count in mutation_type_counts.values())}
     (out / "summary_v3_1.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     report = [
@@ -190,6 +195,7 @@ def build_v3_reports(results: list[dict[str, Any]], cases: list[dict[str, Any]],
         "## Acceptance/rejection rates (Wilson 95% CI)", "", markdown_table(["Expected class", "n", "Acceptance rate", "95% CI", "Rejection rate", "95% CI"], metric_table), "",
         "Boundary cases are excluded from these rates and are reported only as observed in `boundary_findings_v3_1.md`.", "",
         "## Per mutation type", "", markdown_table(["Group", "Mutation type", "Class", "n", "Accepted", "Rejected", "Observed vs expected"], [[row["group"], row["mutation_type"], row["expected_class"], row["n"], row["accepted"], row["rejected"], row["observed_vs_expected"]] for row in per_type]), "",
+        f"Distinct mutation types: **{summary['mutation_types']}**; types with n < 20: **{summary['types_n_lt_20']}**.", "",
         f"Must-class failures: **{len(failures)}**. See `bugs_found_v3.md`. Boundary cases: **{class_counts['boundary']}**.", "",
         "## Pilot, natural proposals, and report-only flags", "",
         f"The preflight accepted all **24/24** original valid pilot records. The saved natural deterministic proposals were **{natural_summary['accepted']} accepted / {natural_summary['rejected']} rejected**. Short sentences (<5 normalized whitespace tokens): **{natural_summary['short_sentence_count']}**; reference-like heuristic: **{natural_summary['reference_like_count']}**; both: **{natural_summary['both_flags_count']}**. These are report-only flags and do not influence validator decisions. See `natural_proposals_v3_1_flags.csv`.", "",

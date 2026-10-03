@@ -1,0 +1,13 @@
+{
+  "accepted": 180,
+  "boundary_cases": 80,
+  "cases": 580,
+  "classes": {
+    "boundary": 80,
+    "must_accept": 125,
+    "must_reject": 375
+  },
+  "must_class_failures": 0,
+  "mutation_types": 58,
+  "types_n_lt_20": 58
+}
