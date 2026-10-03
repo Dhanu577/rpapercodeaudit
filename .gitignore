@@ -9,4 +9,7 @@ outputs/
 examples/deseq2/repo/
 *.xlsx
 *.zip
+.venv/
+venv/
+*.egg-info/
 .DS_Store
