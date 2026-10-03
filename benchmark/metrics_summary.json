@@ -1,0 +1,13 @@
+{
+  "tier_a": {
+    "n": 326,
+    "valid": 24,
+    "invalid": 302,
+    "false_acceptances": 0,
+    "false_rejections": 0
+  },
+  "tier_b": {
+    "n": 96
+  },
+  "anomalies": 0
+}

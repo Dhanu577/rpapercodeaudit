@@ -1,0 +1,7 @@
+mutation_type,n,rejected,accepted,rejection_rate,ci_low,ci_high,flag_n_lt_20
+A0_valid,24,0,24,0.0,1.3877787807814457e-17,0.13797620467498017,False
+A1_altered_sentence,72,72,0,1.0,0.9493488274035422,1.0,False
+A2_nonexistent_sentence,72,72,0,1.0,0.9493488274035422,1.0,False
+A3_wrong_commit,15,15,0,1.0,0.7961166989641515,1.0,True
+A4_wrong_file,23,23,0,1.0,0.8568833815495731,1.0,False
+A5_invalid_line_range,120,120,0,1.0,0.9689808335812966,1.0,False

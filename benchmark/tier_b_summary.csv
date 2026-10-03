@@ -1,0 +1,5 @@
+mutation_type,n,mechanically_accepted,acceptance_rate
+B1_irrelevant_authentic_excerpt,24,24,1.0
+B2_misleading_justification,24,24,1.0
+B3_contradictory_authentic_excerpt,24,24,1.0
+B4_compound_claim,24,24,1.0

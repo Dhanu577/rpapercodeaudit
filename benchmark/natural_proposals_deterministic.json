@@ -1,0 +1,2239 @@
+{
+  "mode": "deterministic",
+  "proposals": [
+    {
+      "id": "H0001",
+      "verbatim_sentence": "counts per gene in RNA-seq, for evidence of systematic changes across experimental conditions.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0002",
+      "verbatim_sentence": "experiment [1].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0003",
+      "verbatim_sentence": "the heterogeneity of dispersion values for different genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0004",
+      "verbatim_sentence": ", that the gene is not at all affected by the treatment.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0005",
+      "verbatim_sentence": "genes passing multiple-test adjustment, ranked byP value.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0006",
+      "verbatim_sentence": "0/) applies to the data made available in this article, unless otherwise stated.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0007",
+      "verbatim_sentence": "genes with low counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0008",
+      "verbatim_sentence": "whelmingly long list of hits [9].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0009",
+      "verbatim_sentence": "method [4].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0010",
+      "verbatim_sentence": "estimators for dispersion and fold change.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0011",
+      "verbatim_sentence": "ing of overdispersed count data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0012",
+      "verbatim_sentence": "able [10] as an R/Bioconductor package [11].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0013",
+      "verbatim_sentence": "to a gene in a sample.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0014",
+      "verbatim_sentence": "(GLM)[12] as follows.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0015",
+      "verbatim_sentence": "already used in DESeq [4].",
+      "section_or_figure": "unknown",
+      "claim_type": "parameters",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0016",
+      "verbatim_sentence": "fold change between treatment and control.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0017",
+      "verbatim_sentence": "studies [15].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0018",
+      "verbatim_sentence": "gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0019",
+      "verbatim_sentence": "genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0020",
+      "verbatim_sentence": "age expression strength have similar dispersion.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0021",
+      "verbatim_sentence": "(black dots in Figure 1).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0022",
+      "verbatim_sentence": "smooth curve, as shown by the red line in Figure 1.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0023",
+      "verbatim_sentence": "dispersion values (blue arrow heads).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0024",
+      "verbatim_sentence": "Figure 1 Shrinkage estimation of dispersion.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0025",
+      "verbatim_sentence": "Plot of dispersion estimates over the average expression strength (A) for the Bottomly etal.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0026",
+      "verbatim_sentence": "[17] dataset, fitting only an intercept term.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0027",
+      "verbatim_sentence": "MLEs are obtained using only the respective gene’s data (black dots).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0028",
+      "verbatim_sentence": "dispersion-mean dependence.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0029",
+      "verbatim_sentence": "For clarity, only a subset of genes is shown, which is enriched for dispersion outliers.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0030",
+      "verbatim_sentence": "but with dispersions of all genes shown.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0031",
+      "verbatim_sentence": "MAP, maximum aposteriori; MLE, maximum-likelihood estimate.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0032",
+      "verbatim_sentence": "the final estimate.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0033",
+      "verbatim_sentence": "(Additional file 1: Figure S2).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0034",
+      "verbatim_sentence": "fit.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0035",
+      "verbatim_sentence": "result from underestimates of dispersion.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0036",
+      "verbatim_sentence": "final estimate of dispersion.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0037",
+      "verbatim_sentence": "count.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0038",
+      "verbatim_sentence": "[16].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0039",
+      "verbatim_sentence": "expressed genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0040",
+      "verbatim_sentence": "Figure 2 Effect of shrinkage onlogarithmic fold change estimates.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0041",
+      "verbatim_sentence": "[16] dataset.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0042",
+      "verbatim_sentence": "similar mean count and MLE logarithmic fold change are highlighted with green and purple circles.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0043",
+      "verbatim_sentence": "these genes reveal low dispersion for the gene in green and high dispersion for the gene in purple.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0044",
+      "verbatim_sentence": "than for the green gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0045",
+      "verbatim_sentence": "LFC estimate (horizontal error bar).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0046",
+      "verbatim_sentence": ", adjusted; LFC, logarithmic fold change; MAP, maximum a posteriori; MLE, maximum-likelihood estimate.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0047",
+      "verbatim_sentence": "over all genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0048",
+      "verbatim_sentence": "100 up- or down-regulated genes in group II.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0049",
+      "verbatim_sentence": "improves to 81 of 100 genes (Additional file 1: Figure S3).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0050",
+      "verbatim_sentence": "ber (pseudocount) to all counts before forming ratios.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0051",
+      "verbatim_sentence": "Hochberg [21].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0052",
+      "verbatim_sentence": "lar objective is control or estimation of the FDR.",
+      "section_or_figure": "unknown",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0053",
+      "verbatim_sentence": "Figure 3 Stability of logarithmic fold changes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0054",
+      "verbatim_sentence": "right quadrants indicate genes with a change of sign of LFC.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0055",
+      "verbatim_sentence": "1.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0056",
+      "verbatim_sentence": "maximum-likelihood estimate; RMSE, root-mean-square error.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0057",
+      "verbatim_sentence": "often higher than the individual P values of these genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0058",
+      "verbatim_sentence": "null hypothesis [22] (see Methods).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0059",
+      "verbatim_sentence": "a user-specified target FDR.",
+      "section_or_figure": "unknown",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0060",
+      "verbatim_sentence": "of 10% are depicted in red.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0061",
+      "verbatim_sentence": "most genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0062",
+      "verbatim_sentence": "ered biologically significant.",
+      "section_or_figure": "unknown",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0063",
+      "verbatim_sentence": "threshold, |βir| ≤ θ.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0064",
+      "verbatim_sentence": "threshold.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0065",
+      "verbatim_sentence": "data [19].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0066",
+      "verbatim_sentence": "assumptions of the model [24].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0067",
+      "verbatim_sentence": "for a gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0068",
+      "verbatim_sentence": "Figure 4 Hypothesis testing involving non-zero thresholds.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0069",
+      "verbatim_sentence": "adjusted P values.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0070",
+      "verbatim_sentence": ", adjusted.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0071",
+      "verbatim_sentence": "region around ⃗βi fit using all the samples [25].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0072",
+      "verbatim_sentence": "gene from downstream analysis.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0073",
+      "verbatim_sentence": "the dispersion, LFCs and P values for these genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0074",
+      "verbatim_sentence": "[16] dataset.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0075",
+      "verbatim_sentence": "better fit to the majority of the samples.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0076",
+      "verbatim_sentence": "genes, which show exaggerated LFCs, as discussed above.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0077",
+      "verbatim_sentence": "different samples for genes with low counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0078",
+      "verbatim_sentence": "mean counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0079",
+      "verbatim_sentence": "boring genes undergo shrinkage of different strength.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0080",
+      "verbatim_sentence": "trols, at 2 weeks and at 2 months after the ligation.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0081",
+      "verbatim_sentence": "ReCount online resource [27].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0082",
+      "verbatim_sentence": "[16] dataset.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0083",
+      "verbatim_sentence": "Figure 5 Variance stabilization and clustering after rlog transformation.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0084",
+      "verbatim_sentence": "f(Kij) = log2(Kij/sj + 1), and the rlog.",
+      "section_or_figure": "unknown",
+      "claim_type": "formula",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0085",
+      "verbatim_sentence": "groups defined by treatment and time, while using the logarithm-transformed counts (C) produces a more ambiguous result.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0086",
+      "verbatim_sentence": "assigned to a gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0087",
+      "verbatim_sentence": "nate from each gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0088",
+      "verbatim_sentence": "cases [28].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0089",
+      "verbatim_sentence": "for alternative isoforms in splice graphs [31,32].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0090",
+      "verbatim_sentence": "we used a combination of simulations and real data.",
+      "section_or_figure": "unknown",
+      "claim_type": "parameters",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0091",
+      "verbatim_sentence": "option [34], DSS [6] and EBSeq [35].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0092",
+      "verbatim_sentence": "SAMseq permutation method of the samr package [24].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0093",
+      "verbatim_sentence": "procedure [21].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0094",
+      "verbatim_sentence": "10,000 genes with negative binomial distributed counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0095",
+      "verbatim_sentence": "genes, throughout the range of mean counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0096",
+      "verbatim_sentence": "1.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0097",
+      "verbatim_sentence": "precision, or the FDR, in Figure 6.",
+      "section_or_figure": "unknown",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0098",
+      "verbatim_sentence": "P values used for calling differentially expressed genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "parameters",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0099",
+      "verbatim_sentence": "[34].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0100",
+      "verbatim_sentence": "compared in Additional file 1: Figure S9.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0101",
+      "verbatim_sentence": "down-weighting potential outlier counts [34].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0102",
+      "verbatim_sentence": "seen in Additional file 1: Figure S11.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0103",
+      "verbatim_sentence": "Figure 6 Sensitivity and precision of algorithmsacross combinationsof samplesize and effect size.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0104",
+      "verbatim_sentence": "see Additional file 1: Figure S9.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0105",
+      "verbatim_sentence": "Note that EBSeq filters low-count genes (see main text for details).",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0106",
+      "verbatim_sentence": "file 1: Figures S12–S16.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0107",
+      "verbatim_sentence": "had higher error over all genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0108",
+      "verbatim_sentence": "of normalized counts).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0109",
+      "verbatim_sentence": "expression [39].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0110",
+      "verbatim_sentence": "differentially expressed genes exist.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0111",
+      "verbatim_sentence": "(46 base pairs) from male individuals.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0112",
+      "verbatim_sentence": "five against five, and this process was repeated 30 times.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0113",
+      "verbatim_sentence": "sum of read counts across samples were excluded.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0114",
+      "verbatim_sentence": "splits were replicated 30 times.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0115",
+      "verbatim_sentence": "Figure 7 Benchmarkoffalse positive calling.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0116",
+      "verbatim_sentence": "01)under thenull hypothesis.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0117",
+      "verbatim_sentence": "01 (black line).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0118",
+      "verbatim_sentence": "4 for all algorithms.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0119",
+      "verbatim_sentence": "adjusted P value threshold.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0120",
+      "verbatim_sentence": "Figure 8 Sensitivity estimated from experimental reproducibility.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0121",
+      "verbatim_sentence": "iff 2 was used to determine the verification set calls.",
+      "section_or_figure": "unknown",
+      "claim_type": "parameters",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0122",
+      "verbatim_sentence": "nominal adjusted P values (Additional file 1: Figure S19).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0123",
+      "verbatim_sentence": "1).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0124",
+      "verbatim_sentence": "shown in Additional file 1: Figure S20.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0125",
+      "verbatim_sentence": "sitivity plot of Figure 8.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0126",
+      "verbatim_sentence": "Figure 9 Precision estimated from experimental reproducibility.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0127",
+      "verbatim_sentence": "sensitivity of those algorithms that controlled the FDR.",
+      "section_or_figure": "unknown",
+      "claim_type": "statistical_test",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0128",
+      "verbatim_sentence": "gene-level analysis of RNA-seq data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0129",
+      "verbatim_sentence": "library assays [46].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0130",
+      "verbatim_sentence": "is provided in Additional file 1: Table S1.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0131",
+      "verbatim_sentence": "gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0132",
+      "verbatim_sentence": "as final dispersion estimates.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0133",
+      "verbatim_sentence": "matrix X to the gene’s count data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0134",
+      "verbatim_sentence": "adjustment [47].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0135",
+      "verbatim_sentence": "6).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0136",
+      "verbatim_sentence": "1/μj +α .",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0137",
+      "verbatim_sentence": "accepted proposals that satisfy Armijo conditions [50].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0138",
+      "verbatim_sentence": "10−6 (same approach as in DEXSeq [30]).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0139",
+      "verbatim_sentence": "mean in many datasets [3-6,51].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0140",
+      "verbatim_sentence": "dependence of the dispersion on the mean.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0141",
+      "verbatim_sentence": "100, the reciprocal of α0.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0142",
+      "verbatim_sentence": "dispersion.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0143",
+      "verbatim_sentence": "due to a tendency to overestimate dispersion there.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0144",
+      "verbatim_sentence": "Dispersion prior As also observed by Wu et al.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0145",
+      "verbatim_sentence": "25 .",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0146",
+      "verbatim_sentence": "of prior (5).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0147",
+      "verbatim_sentence": "suitable for the gene.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0148",
+      "verbatim_sentence": "divided as usual by the scaling factor −1(3/4).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0149",
+      "verbatim_sentence": "QN(1−p/2) .",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0150",
+      "verbatim_sentence": "log(2)10,or10onthebase2scale)areexcluded.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0151",
+      "verbatim_sentence": "sionalgorithm[56],alsoknownasweightedupdates[57].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0152",
+      "verbatim_sentence": "i = Cov(⃗βi) = (XtWX +⃗ λI)−1(XtWX)(XtWX +⃗ λI)−1.",
+      "section_or_figure": "unknown",
+      "claim_type": "formula",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0153",
+      "verbatim_sentence": "multiplied by 2 to achieve a two-tailed test.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0154",
+      "verbatim_sentence": "the procedure of Benjamini and Hochberg [21].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0155",
+      "verbatim_sentence": "without dispersion shrinkage.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0156",
+      "verbatim_sentence": "tion often zero counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0157",
+      "verbatim_sentence": "the filter statistic still holds for dispersion shrinkage.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0158",
+      "verbatim_sentence": "butions of p across the range of mean normalized counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0159",
+      "verbatim_sentence": "exceeds a threshold θ>0.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0160",
+      "verbatim_sentence": "of the integral is then multiplied by 2 and thresholdedat 1.",
+      "section_or_figure": "unknown",
+      "claim_type": "filtering",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0161",
+      "verbatim_sentence": "θ =0.",
+      "section_or_figure": "unknown",
+      "claim_type": "formula",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0162",
+      "verbatim_sentence": "(σ2r = (log(2))2 1000, or 1000 on the base 2 scale).",
+      "section_or_figure": "unknown",
+      "claim_type": "formula",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0163",
+      "verbatim_sentence": "the variance-mean trend over all genes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0164",
+      "verbatim_sentence": "H =W1/2X(XtWX)−1XtW1/2.",
+      "section_or_figure": "unknown",
+      "claim_type": "formula",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0165",
+      "verbatim_sentence": ",0 .",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0166",
+      "verbatim_sentence": "Bioconductor project [11].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0167",
+      "verbatim_sentence": "Experiment class of the GenomicRanges package [60].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0168",
+      "verbatim_sentence": "function of the GenomicAlignments package [61].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0169",
+      "verbatim_sentence": "and gene annotation versions.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0170",
+      "verbatim_sentence": "Count [64].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0171",
+      "verbatim_sentence": "tion of the GenomicRanges package [60].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0172",
+      "verbatim_sentence": "loaded in March 2013 from Illumina iGenomes.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0173",
+      "verbatim_sentence": "GTF file, release 70, contained in the Illumina iGenome.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0174",
+      "verbatim_sentence": "marking, can be found in a package DESeq2paper [66].",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0175",
+      "verbatim_sentence": "Additional file 1: Supplementary methods, tablesandfigures.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0176",
+      "verbatim_sentence": "grant from the National Institutes of Health (5T32CA009337-33).",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0177",
+      "verbatim_sentence": "question of estimation biases in the dispersion-mean trend fitting.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0178",
+      "verbatim_sentence": "Brookline Avenue, Boston, MA 02215, USA.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0179",
+      "verbatim_sentence": "Molecular Biology Laboratory, Meyerhofstrasse 1, 69117 Heidelberg, Germany.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0180",
+      "verbatim_sentence": "Molecular Genetics, Ihnestrasse 63-73, 14195 Berlin, Germany.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0181",
+      "verbatim_sentence": "1.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0182",
+      "verbatim_sentence": "2.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0183",
+      "verbatim_sentence": "3.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0184",
+      "verbatim_sentence": "4.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0185",
+      "verbatim_sentence": "5.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0186",
+      "verbatim_sentence": "6.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0187",
+      "verbatim_sentence": "12:31–46.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0188",
+      "verbatim_sentence": "Bioinformatics 2007, 23:2881–2887.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0189",
+      "verbatim_sentence": "Nucleic AcidsRes 2012, 40:4288–4297.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0190",
+      "verbatim_sentence": "GenomeBiol 2010, 11:106.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0191",
+      "verbatim_sentence": "27:2672–2678.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0192",
+      "verbatim_sentence": "Biostatistics 2013, 14:232–243.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0193",
+      "verbatim_sentence": "7.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0194",
+      "verbatim_sentence": "8.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0195",
+      "verbatim_sentence": "9.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0196",
+      "verbatim_sentence": "identifying differential expression in sequence count data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0197",
+      "verbatim_sentence": "Bioinformatics 2010, 11:422.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0198",
+      "verbatim_sentence": "Biostatistics 2013, 14:113–128.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0199",
+      "verbatim_sentence": "31,500-element cDNA array.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0200",
+      "verbatim_sentence": "GenomeRes 2001, 11:1861–1870.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0201",
+      "verbatim_sentence": "10.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0202",
+      "verbatim_sentence": "11.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0203",
+      "verbatim_sentence": "Genome Biol 2004, 5:R80.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0204",
+      "verbatim_sentence": "12.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0205",
+      "verbatim_sentence": "Hall/CRC; 1989.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0206",
+      "verbatim_sentence": "13.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0207",
+      "verbatim_sentence": "2012, 13:204–216.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0208",
+      "verbatim_sentence": "14.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0209",
+      "verbatim_sentence": "BMCBioinformatics 2011, 12:480.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0210",
+      "verbatim_sentence": "15.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0211",
+      "verbatim_sentence": "Biol 2004, 3:1–25.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0212",
+      "verbatim_sentence": "16.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0213",
+      "verbatim_sentence": "PLoSONE 2011, 6:17820.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0214",
+      "verbatim_sentence": "17.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0215",
+      "verbatim_sentence": "Nature 2010, 464:768–772.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0216",
+      "verbatim_sentence": "18.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0217",
+      "verbatim_sentence": "Springer; 2009.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0218",
+      "verbatim_sentence": "19.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0219",
+      "verbatim_sentence": "Bioinformatics 2013, 14:262.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0220",
+      "verbatim_sentence": "20.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0221",
+      "verbatim_sentence": "Bioinformatics 2012, 28:2782–2788.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0222",
+      "verbatim_sentence": "21.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0223",
+      "verbatim_sentence": "Methodol 1995, 57:289–300.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0224",
+      "verbatim_sentence": "22.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0225",
+      "verbatim_sentence": "USA 2010, 107:9546–9551.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0226",
+      "verbatim_sentence": "23.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0227",
+      "verbatim_sentence": "Bioinformatics 2009, 25:765–771.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0228",
+      "verbatim_sentence": "24.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0229",
+      "verbatim_sentence": "Stat Methods Med Res 2013, 22:519–536.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0230",
+      "verbatim_sentence": "25.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0231",
+      "verbatim_sentence": "Technometrics 1977, 19:15–18.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0232",
+      "verbatim_sentence": "26.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0233",
+      "verbatim_sentence": "GenomeRes 2010, 20:847–860.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0234",
+      "verbatim_sentence": "27.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0235",
+      "verbatim_sentence": "of analysis-ready RNA-seq gene count datasets.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0236",
+      "verbatim_sentence": "2011, 12:449.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0237",
+      "verbatim_sentence": "28.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0238",
+      "verbatim_sentence": "NatBiotechnol 2012, 31:46–53.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0239",
+      "verbatim_sentence": "29.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0240",
+      "verbatim_sentence": "Bioinformatics 2012, 28:1721–1728.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0241",
+      "verbatim_sentence": "30.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0242",
+      "verbatim_sentence": "GenomeRes 2012, 22:2008–2017.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0243",
+      "verbatim_sentence": "31.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0244",
+      "verbatim_sentence": "JComputBiol2009, 16:1117–1140.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0245",
+      "verbatim_sentence": "32.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0246",
+      "verbatim_sentence": "2013.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0247",
+      "verbatim_sentence": "33.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0248",
+      "verbatim_sentence": "for differential expression analysis of digital gene expression data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0249",
+      "verbatim_sentence": "Bioinformatics 2009, 26:139–140.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0250",
+      "verbatim_sentence": "34.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0251",
+      "verbatim_sentence": "Nucleic Acids Res 2014, 42:e91.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0252",
+      "verbatim_sentence": "35.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0253",
+      "verbatim_sentence": "Bioinformatics 2013, 29:1035–1043.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0254",
+      "verbatim_sentence": "36.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0255",
+      "verbatim_sentence": "linear model analysis tools for RNA-seq read counts.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0256",
+      "verbatim_sentence": "2014, 15:29.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0257",
+      "verbatim_sentence": "37.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0258",
+      "verbatim_sentence": "JClassif 1985, 2:193–218.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0259",
+      "verbatim_sentence": "38.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0260",
+      "verbatim_sentence": "AnnApplStat 2011, 5:2493–2518.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0261",
+      "verbatim_sentence": "39.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0262",
+      "verbatim_sentence": "Bioinformatics 2006, 22:789–794.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0263",
+      "verbatim_sentence": "40.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0264",
+      "verbatim_sentence": "Nature 2014, 510:278–282.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0265",
+      "verbatim_sentence": "41.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0266",
+      "verbatim_sentence": "2013.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0267",
+      "verbatim_sentence": "42.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0268",
+      "verbatim_sentence": "Nature 2012, 481:389–393.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0269",
+      "verbatim_sentence": "43.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0270",
+      "verbatim_sentence": "G3 (Bethesda) 2013, 4:11–18.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0271",
+      "verbatim_sentence": "44.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0272",
+      "verbatim_sentence": "PLoSComputBiol 2014, 10:1003531.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0273",
+      "verbatim_sentence": "45.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0274",
+      "verbatim_sentence": "42:3623–3637.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0275",
+      "verbatim_sentence": "46.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0276",
+      "verbatim_sentence": "Nature 2014, 509:487–491.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0277",
+      "verbatim_sentence": "47.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0278",
+      "verbatim_sentence": "J RStat Soc Ser BMethodol 1987, 49:1–39.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0279",
+      "verbatim_sentence": "48.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0280",
+      "verbatim_sentence": "binomial dispersion, with applications to SAGE data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0281",
+      "verbatim_sentence": "2007, 9:321–332.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0282",
+      "verbatim_sentence": "49.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0283",
+      "verbatim_sentence": "New York City, USA: Oxford University Press; 2001.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0284",
+      "verbatim_sentence": "50.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0285",
+      "verbatim_sentence": "PacJ Math 1966, 16:1–3.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0286",
+      "verbatim_sentence": "51.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0287",
+      "verbatim_sentence": "model for assessing differential gene expression from RNA-seq.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0288",
+      "verbatim_sentence": "Appl Genet Mol Biol 2011, 10:1–28.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0289",
+      "verbatim_sentence": "52.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0290",
+      "verbatim_sentence": "NewYork, USA: Dover Publications; 1965.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0291",
+      "verbatim_sentence": "53.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0292",
+      "verbatim_sentence": "2001, 8:37–52.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0293",
+      "verbatim_sentence": "54.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0294",
+      "verbatim_sentence": "18:96–104.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0295",
+      "verbatim_sentence": "55.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0296",
+      "verbatim_sentence": "transformation for gene-expression microarray data.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0297",
+      "verbatim_sentence": "2002, 18:105–110.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0298",
+      "verbatim_sentence": "56.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0299",
+      "verbatim_sentence": "Stanford University, Department of Statistics; 2006.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0300",
+      "verbatim_sentence": "57.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0301",
+      "verbatim_sentence": "JStatSoftw 2010, 33:1–22.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0302",
+      "verbatim_sentence": "58.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0303",
+      "verbatim_sentence": "BMCBioinformatics 2011, 12:372.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0304",
+      "verbatim_sentence": "59.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0305",
+      "verbatim_sentence": "NewYork, USA: Chapman and Hall/CRC; 1982.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0306",
+      "verbatim_sentence": "60.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0307",
+      "verbatim_sentence": "PLoSComputBiol 2013, 9:1003118.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0308",
+      "verbatim_sentence": "61.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0309",
+      "verbatim_sentence": "2013.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0310",
+      "verbatim_sentence": "62.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0311",
+      "verbatim_sentence": "Bioinformatics 2015, 31:166.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0312",
+      "verbatim_sentence": "63.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0313",
+      "verbatim_sentence": "2012, 28:2532–2533.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0314",
+      "verbatim_sentence": "64.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0315",
+      "verbatim_sentence": "Bioinformatics 2014, 30:923–930.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0316",
+      "verbatim_sentence": "65.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0317",
+      "verbatim_sentence": "deletions and gene fusions.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0318",
+      "verbatim_sentence": "GenomeBiol 2013, 14:36.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    },
+    {
+      "id": "H0319",
+      "verbatim_sentence": "66.",
+      "section_or_figure": "unknown",
+      "claim_type": "other",
+      "what_to_look_for": "Check the parameters, defaults, formula, threshold, or statistical rule stated in this sentence."
+    }
+  ],
+  "rejected": []
+}
