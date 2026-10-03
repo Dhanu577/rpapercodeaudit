@@ -1,0 +1,1130 @@
+{
+  "scope": "PARTIAL",
+  "method": "Project deterministic pipeline location stage: build_index(repo, commit) then locate_claims(index, proposals, package='DESeq2', ranking_mode='none', default window=2 and max_candidates=5); every returned CodeLocation was then passed through real validate_location. A batch call matches pipeline orchestration; one-item calls are used only to associate results with repeated proposal ids.",
+  "api_calls": 0,
+  "source_proposals_count": 24,
+  "source_proposals_sha256_before": "a2db70a58ee0ae8575c765defb164b3bd479389abeb4b076ade2cd9676ff537d",
+  "source_proposals_sha256_after": "a2db70a58ee0ae8575c765defb164b3bd479389abeb4b076ade2cd9676ff537d",
+  "source_proposals_unchanged": true,
+  "repo_path": "/home/ubuntu/rpapercodeaudit/examples/deseq2/repo",
+  "commit_hash": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+  "package": "DESeq2",
+  "ranking_mode": "none",
+  "window": 2,
+  "max_candidates": 5,
+  "accepted_proposals": 24,
+  "rejected_proposals": 0,
+  "not_found_proposals": 0,
+  "batch_locator_valid_locations": 120,
+  "batch_locator_invalid_candidates": 0,
+  "individually_revalidated_candidates_accepted": 120,
+  "individually_revalidated_candidates_rejected": 0,
+  "locator_invalid_entries": 0,
+  "raw_errors": [],
+  "proposals": [
+    {
+      "proposal_index": 1,
+      "proposal_id": "C0001",
+      "model_text": "DESeq2 handles these cases by using the gene-wise estimate instead of the shrunken estimate when the former is more than 2 residual standard deviations above the curve.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 667,
+          "end_line": 671,
+          "code_lines": "667-671",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 872,
+          "end_line": 876,
+          "code_lines": "872-876",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 942,
+          "end_line": 946,
+          "code_lines": "942-946",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1105,
+          "end_line": 1109,
+          "code_lines": "1105-1109",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 537,
+          "end_line": 541,
+          "code_lines": "537-541",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 3,
+      "proposal_id": "C0003",
+      "model_text": "This distribution is used as a prior on LFCs in a second round of GLM fits, and the MAP estimates are kept as final estimates of LFC.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 1221,
+          "end_line": 1225,
+          "code_lines": "1221-1225",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1253,
+          "end_line": 1257,
+          "code_lines": "1253-1257",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2426,
+          "end_line": 2430,
+          "code_lines": "2426-2430",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 617,
+          "end_line": 621,
+          "code_lines": "617-621",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/parallel.R",
+          "start_line": 49,
+          "end_line": 53,
+          "code_lines": "49-53",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 5,
+      "proposal_id": "C0005",
+      "model_text": "For significance testing, DESeq2 uses a Wald test: the shrunken estimate of LFC is divided by its standard error, resulting in a z-statistic, which is compared to a standard normal distribution.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/results.R",
+          "start_line": 211,
+          "end_line": 215,
+          "code_lines": "211-215",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1230,
+          "end_line": 1234,
+          "code_lines": "1230-1234",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1299,
+          "end_line": 1303,
+          "code_lines": "1299-1303",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 200,
+          "end_line": 204,
+          "code_lines": "200-204",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 2,
+          "end_line": 6,
+          "code_lines": "2-6",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 8,
+      "proposal_id": "C0008",
+      "model_text": "DESeq2 by default will choose a threshold that maximizes the number of genes found at a user-specified target FDR.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/results.R",
+          "start_line": 161,
+          "end_line": 165,
+          "code_lines": "161-165",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/AllClasses.R",
+          "start_line": 104,
+          "end_line": 108,
+          "code_lines": "104-108",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/RcppExports.R",
+          "start_line": 3,
+          "end_line": 7,
+          "code_lines": "3-7",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/RcppExports.R",
+          "start_line": 11,
+          "end_line": 15,
+          "code_lines": "11-15",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 840,
+          "end_line": 844,
+          "code_lines": "840-844",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 9,
+      "proposal_id": "C0001",
+      "model_text": "DESeq2 offers tests for composite null hypotheses of the form |βir|≤θ,whereβir is the shrunken LFC from the estimation procedure described above.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/methods.R",
+          "start_line": 633,
+          "end_line": 637,
+          "code_lines": "633-637",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 353,
+          "end_line": 357,
+          "code_lines": "353-357",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/AllClasses.R",
+          "start_line": 53,
+          "end_line": 57,
+          "code_lines": "53-57",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 59,
+          "end_line": 63,
+          "code_lines": "59-63",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 99,
+          "end_line": 103,
+          "code_lines": "99-103",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 12,
+      "proposal_id": "C0004",
+      "model_text": "However, if there are two or fewer replicates for a condition, these samplesdonotcontribute to outlier detection, as thereare insufficient replicates to determine outlier status.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 2087,
+          "end_line": 2091,
+          "code_lines": "2087-2091",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2364,
+          "end_line": 2368,
+          "code_lines": "2364-2368",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 188,
+          "end_line": 192,
+          "code_lines": "188-192",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2039,
+          "end_line": 2043,
+          "code_lines": "2039-2043",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2092,
+          "end_line": 2096,
+          "code_lines": "2092-2096",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 13,
+      "proposal_id": "C0005",
+      "model_text": "By default, outliers in conditions withsix or fewer replicatescausethewholegenetobeflaggedandremoved from subsequent analysis, including P value adjustment for multiple testing.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/plots.R",
+          "start_line": 199,
+          "end_line": 203,
+          "code_lines": "199-203",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 63,
+          "end_line": 67,
+          "code_lines": "63-67",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 119,
+          "end_line": 123,
+          "code_lines": "119-123",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 161,
+          "end_line": 165,
+          "code_lines": "161-165",
+          "status": "candidate"
+        },
+        {
+          "code_file": "tests/testthat/test_results.R",
+          "start_line": 210,
+          "end_line": 214,
+          "code_lines": "210-214",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 14,
+      "proposal_id": "C0006",
+      "model_text": "For conditions that contain seven or more replicates, DESeq2 replaces the outlier counts with an imputed value, namely the trimmed mean over all samples, scaled by the size factor, and then re-estimates the dispersion, LFCs and P values for these genes.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 2055,
+          "end_line": 2059,
+          "code_lines": "2055-2059",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/AllClasses.R",
+          "start_line": 260,
+          "end_line": 264,
+          "code_lines": "260-264",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 531,
+          "end_line": 535,
+          "code_lines": "531-535",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2042,
+          "end_line": 2046,
+          "code_lines": "2042-2046",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2108,
+          "end_line": 2112,
+          "code_lines": "2108-2112",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 18,
+      "proposal_id": "C0002",
+      "model_text": "We simulated datasets of 10,000 genes with negative binomial distributed counts.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 87,
+          "end_line": 91,
+          "code_lines": "87-91",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 110,
+          "end_line": 114,
+          "code_lines": "110-114",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 435,
+          "end_line": 439,
+          "code_lines": "435-439",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2051,
+          "end_line": 2055,
+          "code_lines": "2051-2055",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2070,
+          "end_line": 2074,
+          "code_lines": "2070-2074",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 20,
+      "proposal_id": "C0004",
+      "model_text": "These datasets were of varying total sample size (m ∈ {6, 8, 10, 20}), and the samples were split into two equal sized groups; 80% of the simulated genes had no true differential expression, while for 20% of the genes, true fold changes of 2, 3 and 4 were used to generate counts across the two groups, with the direction of fold change chosen randomly.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 229,
+          "end_line": 233,
+          "code_lines": "229-233",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/rlog.R",
+          "start_line": 95,
+          "end_line": 99,
+          "code_lines": "95-99",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/vst.R",
+          "start_line": 96,
+          "end_line": 100,
+          "code_lines": "96-100",
+          "status": "candidate"
+        },
+        {
+          "code_file": "tests/testthat/test_results.R",
+          "start_line": 7,
+          "end_line": 11,
+          "code_lines": "7-11",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 148,
+          "end_line": 152,
+          "code_lines": "148-152",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 21,
+      "proposal_id": "C0005",
+      "model_text": "The simulated differentially expressed genes were chosen uniformly at random among all the genes, throughout the range of mean counts.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/vst.R",
+          "start_line": 199,
+          "end_line": 203,
+          "code_lines": "199-203",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/RcppExports.R",
+          "start_line": 3,
+          "end_line": 7,
+          "code_lines": "3-7",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/RcppExports.R",
+          "start_line": 11,
+          "end_line": 15,
+          "code_lines": "11-15",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 235,
+          "end_line": 239,
+          "code_lines": "235-239",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 547,
+          "end_line": 551,
+          "code_lines": "547-551",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 26,
+      "proposal_id": "C0010",
+      "model_text": "We randomly drew without replacement ten samples from the set to compare five against five, and this process was repeated 30 times.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 82,
+          "end_line": 86,
+          "code_lines": "82-86",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 229,
+          "end_line": 233,
+          "code_lines": "229-233",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/helper.R",
+          "start_line": 270,
+          "end_line": 274,
+          "code_lines": "270-274",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 117,
+          "end_line": 121,
+          "code_lines": "117-121",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/plots.R",
+          "start_line": 435,
+          "end_line": 439,
+          "code_lines": "435-439",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 35,
+      "proposal_id": "C0008",
+      "model_text": "This GLM uses a rough method-of-moments estimate of dispersion, based on the within-group variances and means.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/methods.R",
+          "start_line": 605,
+          "end_line": 609,
+          "code_lines": "605-609",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/wrappers.R",
+          "start_line": 1,
+          "end_line": 3,
+          "code_lines": "1-3",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/wrappers.R",
+          "start_line": 1,
+          "end_line": 5,
+          "code_lines": "1-5",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/wrappers.R",
+          "start_line": 44,
+          "end_line": 48,
+          "code_lines": "44-48",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 87,
+          "end_line": 91,
+          "code_lines": "87-91",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 36,
+      "proposal_id": "C0009",
+      "model_text": "We then maximize the Cox–Reid adjusted likelihood of the dispersion, conditioned on the fitted values ˆμ0 ij from the initial fit, to obtain the gene-wise estimate αgw i",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/methods.R",
+          "start_line": 626,
+          "end_line": 630,
+          "code_lines": "626-630",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2439,
+          "end_line": 2443,
+          "code_lines": "2439-2443",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 612,
+          "end_line": 616,
+          "code_lines": "612-616",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 201,
+          "end_line": 205,
+          "code_lines": "201-205",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 593,
+          "end_line": 597,
+          "code_lines": "593-597",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 37,
+      "proposal_id": "C0001",
+      "model_text": "The optimization in Equation (7) is performed on the scale of logα using a backtracking line search with accepted proposals that satisfy Armijo conditions [50].",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/methods.R",
+          "start_line": 612,
+          "end_line": 616,
+          "code_lines": "612-616",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 613,
+          "end_line": 617,
+          "code_lines": "613-617",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/wrappers.R",
+          "start_line": 2,
+          "end_line": 6,
+          "code_lines": "2-6",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/wrappers.R",
+          "start_line": 45,
+          "end_line": 49,
+          "code_lines": "45-49",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 685,
+          "end_line": 689,
+          "code_lines": "685-689",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 38,
+      "proposal_id": "C0002",
+      "model_text": "The hyperparameters a1 and α0 of (6) are obtained by iteratively fitting a gamma-family GLM. At each iteration, genes with a ratio of dispersion to fitted value outside the range [10−4,15]are left out until thesumofsquared LFCs of the newcoefficients over the old coefficients is less than 10−6 (same approach as in DEXSeq [30]).",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 229,
+          "end_line": 233,
+          "code_lines": "229-233",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/rlog.R",
+          "start_line": 95,
+          "end_line": 99,
+          "code_lines": "95-99",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 233,
+          "end_line": 237,
+          "code_lines": "233-237",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 656,
+          "end_line": 660,
+          "code_lines": "656-660",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/rlog.R",
+          "start_line": 39,
+          "end_line": 43,
+          "code_lines": "39-43",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 45,
+      "proposal_id": "C0009",
+      "model_text": "Tomakethefitrobustagainstoutlierswithveryhigh absoluteLFCvalues,weusequantilematching:thewidth σr ischosensuchthatthe(1−p)empiricalquantileofthe absolutevalueof theobservedLFCs, ⃗βMLE r ,matchesthe (1−p/2)theoreticalquantileoftheprior,N(0,σ2r ),where pissetbydefaultto0.05.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 1252,
+          "end_line": 1256,
+          "code_lines": "1252-1256",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 238,
+          "end_line": 242,
+          "code_lines": "238-242",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1697,
+          "end_line": 1701,
+          "code_lines": "1697-1701",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2069,
+          "end_line": 2073,
+          "code_lines": "2069-2073",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2780,
+          "end_line": 2784,
+          "code_lines": "2780-2784",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 46,
+      "proposal_id": "C0010",
+      "model_text": "Toensurethatthepriorwidthσrwillbeindependentof thechoiceofbaselevel, theestimatesfromthequantile matchingprocedureareaveragedforeachfactoroverall possiblecontrastsoffactorlevels.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 1265,
+          "end_line": 1269,
+          "code_lines": "1265-1269",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2042,
+          "end_line": 2046,
+          "code_lines": "2042-2046",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2055,
+          "end_line": 2059,
+          "code_lines": "2055-2059",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 2693,
+          "end_line": 2697,
+          "code_lines": "2693-2697",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 425,
+          "end_line": 429,
+          "code_lines": "425-429",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 47,
+      "proposal_id": "C0011",
+      "model_text": "Whendeterminingthe empiricalupperquantile,extremeLFCvalues(βMLE ir > log(2)10,or10onthebase2scale)areexcluded.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 442,
+          "end_line": 446,
+          "code_lines": "442-446",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 443,
+          "end_line": 447,
+          "code_lines": "443-447",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 450,
+          "end_line": 454,
+          "code_lines": "450-454",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1267,
+          "end_line": 1271,
+          "code_lines": "1267-1271",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1956,
+          "end_line": 1960,
+          "code_lines": "1956-1960",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 48,
+      "proposal_id": "C0012",
+      "model_text": "Theterm (β), i.e.,thelogarithmofthedensityofthe normal prior (uptoanadditiveconstant), canbe read asaridgepenalty term, andtherefore,weperformthe optimizationusingtheiterativelyreweightedridgeregres sionalgorithm[56],alsoknownasweightedupdates[57].",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 238,
+          "end_line": 242,
+          "code_lines": "238-242",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 617,
+          "end_line": 621,
+          "code_lines": "617-621",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/methods.R",
+          "start_line": 662,
+          "end_line": 666,
+          "code_lines": "662-666",
+          "status": "candidate"
+        },
+        {
+          "code_file": "src/DESeq2.cpp",
+          "start_line": 154,
+          "end_line": 158,
+          "code_lines": "154-158",
+          "status": "candidate"
+        },
+        {
+          "code_file": "tests/testthat/test_weights.R",
+          "start_line": 14,
+          "end_line": 18,
+          "code_lines": "14-18",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 50,
+      "proposal_id": "C0002",
+      "model_text": "The tail integrals of the standard normal distribution are multiplied by 2 to achieve a two-tailed test.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 104,
+          "end_line": 108,
+          "code_lines": "104-108",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 357,
+          "end_line": 361,
+          "code_lines": "357-361",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 134,
+          "end_line": 138,
+          "code_lines": "134-138",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 148,
+          "end_line": 152,
+          "code_lines": "148-152",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 121,
+          "end_line": 125,
+          "code_lines": "121-125",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 56,
+      "proposal_id": "C0008",
+      "model_text": "DESeq2 requires that no prior has been used when testing the null hypothesis of large LFCs, so that the data alone must provide evidence against the null hypothesis.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/results.R",
+          "start_line": 483,
+          "end_line": 487,
+          "code_lines": "483-487",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1821,
+          "end_line": 1825,
+          "code_lines": "1821-1825",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/lfcShrink.R",
+          "start_line": 179,
+          "end_line": 183,
+          "code_lines": "179-183",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/plots.R",
+          "start_line": 211,
+          "end_line": 215,
+          "code_lines": "211-215",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 481,
+          "end_line": 485,
+          "code_lines": "481-485",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 57,
+      "proposal_id": "C0009",
+      "model_text": "First, when any interaction terms are included in the design, the LFC prior width for main effect terms is not estimated from the data, but set to a wide value (σ2r = (log(2))2 1000, or 1000 on the base 2 scale).",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/core.R",
+          "start_line": 1282,
+          "end_line": 1286,
+          "code_lines": "1282-1286",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/AllClasses.R",
+          "start_line": 443,
+          "end_line": 447,
+          "code_lines": "443-447",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/expanded.R",
+          "start_line": 39,
+          "end_line": 43,
+          "code_lines": "39-43",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 109,
+          "end_line": 113,
+          "code_lines": "109-113",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/results.R",
+          "start_line": 460,
+          "end_line": 464,
+          "code_lines": "460-464",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    },
+    {
+      "proposal_index": 61,
+      "proposal_id": "C0013",
+      "model_text": "The MLE of ⃗βi is used for calculating Cook’s distance.",
+      "accepted_by_deterministic_locator_and_location_validator": true,
+      "validated_candidate_count": 5,
+      "not_found": false,
+      "candidate_locations": [
+        {
+          "code_file": "R/results.R",
+          "start_line": 187,
+          "end_line": 191,
+          "code_lines": "187-191",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 131,
+          "end_line": 135,
+          "code_lines": "131-135",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 188,
+          "end_line": 192,
+          "code_lines": "188-192",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1218,
+          "end_line": 1222,
+          "code_lines": "1218-1222",
+          "status": "candidate"
+        },
+        {
+          "code_file": "R/core.R",
+          "start_line": 1244,
+          "end_line": 1248,
+          "code_lines": "1244-1248",
+          "status": "candidate"
+        }
+      ],
+      "raw_errors": []
+    }
+  ]
+}

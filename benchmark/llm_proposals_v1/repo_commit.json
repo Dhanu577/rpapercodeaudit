@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "repo_path": "/home/ubuntu/rpapercodeaudit/examples/deseq2/repo",
+  "requested_commit": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+  "resolved_commit": "76c5f8523716804dbe0a9500b4b7e216c6af225c",
+  "error": null
+}
