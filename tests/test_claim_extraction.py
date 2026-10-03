@@ -37,6 +37,17 @@ class ClaimValidationTests(unittest.TestCase):
         self.assertNotEqual(normalize_whitespace("Counts"), normalize_whitespace("counts"))
         self.assertNotEqual(normalize_whitespace("10 counts."), normalize_whitespace("10 counts"))
 
+    def test_empty_claims_reject_but_short_exact_substrings_are_accepted(self):
+        result = validate_claims(self.PAPER, [
+            self.claim(""),
+            self.claim(" \t\n "),
+            self.claim("counts"),
+            self.claim("genes below 10 counts."),
+        ])
+        self.assertEqual([claim.verbatim_sentence for claim in result.accepted], ["counts", "genes below 10 counts."])
+        self.assertEqual(len(result.rejected), 2)
+        self.assertTrue(all("non-empty" in item.reason for item in result.rejected))
+
 
 if __name__ == "__main__":
     unittest.main()

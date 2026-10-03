@@ -108,16 +108,26 @@ def _git(repo: Path, *args: str) -> str:
     return completed.stdout.strip()
 
 
+def _normalize_full_commit_hash(commit_hash: Any) -> str:
+    """Validate and lowercase a full commit hash; see benchmark/VALIDATOR_SPEC.md."""
+    if not isinstance(commit_hash, str) or re.fullmatch(r"[0-9A-Fa-f]{40}", commit_hash) is None:
+        raise ValueError("commit_hash must be exactly 40 hexadecimal characters")
+    return commit_hash.lower()
+
+
 def prepare_repository(repo_path: str | Path, commit_hash: str, *, checkout: bool = True) -> tuple[Path, str]:
     """Checkout or verify a commit and return its resolved full hash.
 
     A non-matching HEAD is detached at the requested commit by default. No
     force/reset operation is used, so local uncommitted work is not discarded.
+    Only a full 40-character hexadecimal hash is accepted. See
+    benchmark/VALIDATOR_SPEC.md.
     """
+    normalized_hash = _normalize_full_commit_hash(commit_hash)
     repo = Path(repo_path).expanduser().resolve()
     if not (repo / ".git").exists():
         raise ValueError(f"Not a git repository: {repo}")
-    requested = _git(repo, "rev-parse", "--verify", f"{commit_hash}^{{commit}}")
+    requested = _git(repo, "rev-parse", "--verify", f"{normalized_hash}^{{commit}}")
     head = _git(repo, "rev-parse", "HEAD")
     if head != requested:
         if not checkout:
@@ -224,11 +234,18 @@ def _read_excerpt(path: Path, start_line: int, end_line: int) -> str:
 
 
 def validate_location(repo_path: str | Path, item: Mapping[str, Any]) -> tuple[CodeLocation | None, str | None]:
-    """Re-read a cited range and require exact excerpt equality."""
+    """Re-read a cited range and require exact excerpt equality.
+
+    Line numbers must be integers excluding bool. See benchmark/VALIDATOR_SPEC.md.
+    """
     try:
         relative = Path(str(item["code_file"]))
-        start_line = int(item["start_line"])
-        end_line = int(item["end_line"])
+        start_line = item["start_line"]
+        end_line = item["end_line"]
+        if isinstance(start_line, bool) or not isinstance(start_line, int):
+            raise TypeError("start_line must be an integer (bool, str, float, and None are not accepted)")
+        if isinstance(end_line, bool) or not isinstance(end_line, int):
+            raise TypeError("end_line must be an integer (bool, str, float, and None are not accepted)")
         expected = str(item["code_excerpt"])
         path = (Path(repo_path) / relative).resolve()
         repo = Path(repo_path).resolve()

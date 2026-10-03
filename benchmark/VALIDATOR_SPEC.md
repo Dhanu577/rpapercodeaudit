@@ -1,0 +1,17 @@
+# Validator specification v3
+
+The rules below are the intended deterministic contract. Each numbered rule is one acceptance/rejection rule; documented boundary behavior is explicitly marked unchanged.
+
+1. **ACCEPT** a commit reference only when it is a string of exactly 40 ASCII hexadecimal characters (`[0-9A-Fa-f]{40}`), normalize it to lowercase before Git resolution, and require it to resolve to a commit in the requested repository; **REJECT** `None`, empty strings, non-hex strings, hashes of any other length, short hashes, branch names, tag names, `HEAD`, and `HEAD~N`, because only a full object identifier is allowed. With `checkout=False`, the resolved full hash must still match `HEAD`.
+2. **ACCEPT** any non-empty claim sentence that is an exact substring after the existing whitespace normalization, regardless of token count; **REJECT** empty or whitespace-only text after normalization. Exactness remains required, but one-word and other short exact substrings are accepted by the validator.
+3. **ACCEPT** `start_line` and `end_line` only when each is a Python `int` instance other than `bool` (including a subclass of `int`) and the range lies within the file; **REJECT** booleans, strings, floats (including `10.0`), `None`, and out-of-bounds ranges, because line positions must be integer values in the file and Python treats `bool` as an `int` subclass for type checks.
+4. **REJECT** the tested sentence claims with inserted zero-width characters because those code points are not present in the paper substring; zero-width characters are not removed by whitespace normalization (current behavior, unchanged).
+5. **ACCEPT** non-breaking spaces as whitespace when normalizing sentence text; Python's `\s` recognizes U+00A0 (current behavior, unchanged).
+6. **ACCEPT** a sentence with the same Unicode code points as the paper (including NFC); **REJECT** canonically equivalent NFD text when the paper contains NFC, because the current whitespace normalizer does not perform Unicode normalization (documented, unchanged).
+7. **DOCUMENTED, NOT CHANGED — boundary: CRLF/LF.** A CRLF file is read in text mode as LF; an LF excerpt matching the read text is accepted and a CRLF excerpt that differs is rejected. This observed behavior is not changed.
+8. **DOCUMENTED, NOT CHANGED — boundary: tab/spaces.** A literal tab excerpt matching the file is accepted; a four-space excerpt for that tab is rejected by exact comparison. This observed behavior is not changed.
+9. **DOCUMENTED, NOT CHANGED — boundary: file-name case.** On the tested Linux filesystem, the correctly cased existing path is accepted and a differently cased missing path is rejected. This observed behavior is not changed or generalized to other filesystems.
+10. **DOCUMENTED, NOT CHANGED — boundary: outside indexed directories.** An exact excerpt from an in-repository `docs/*.txt` file is accepted even though `docs` is not in `INDEX_DIRS`; location validation does not impose the index traversal list as an allowlist. This observed behavior is not changed.
+11. **ACCEPT/REJECT** all other inputs according to the existing validator behavior, unchanged unless a rule above explicitly overrides it.
+
+**Revision note:** This change was made after reviewing `min_words_impact.md` and before any v3 case was run. The five-word threshold rejected valid PDF-derived fragments and reference-list material; short-sentence and reference-like observations are now report-only flags, not rejection rules.

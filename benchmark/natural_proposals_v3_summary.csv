@@ -1,0 +1,3 @@
+mode,proposals,accepted,rejected,note
+deterministic,126,126,193,"Claim-level exact sentence validation applied; source-location validation requires explicit locations."
+llm_assisted,,,,"Skipped: no configured LLM API key; no model output was simulated."
